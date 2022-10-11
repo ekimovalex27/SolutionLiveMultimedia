@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="JetSAS.LiveMultimediaService" CodeBehind="LiveMultimediaService.svc.cs" %>

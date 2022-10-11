@@ -1,0 +1,2 @@
+MainPackage=C:\projects\SolutionLiveMultimedia\LiveMultimediaServer\bin\ARM\Debug\LiveMultimediaServer_1.1.0.0_ARM_Debug.appx
+SymbolPackage=C:\projects\SolutionLiveMultimedia\LiveMultimediaServer\AppPackages\LiveMultimediaServer_1.1.0.0_Debug_Test\LiveMultimediaServer_1.1.0.0_ARM_Debug.appxsym

@@ -1,0 +1,11 @@
+BE8M8EQn2UAAAAAAAAAAEmbuBjvTMY-QM1ahppwk7tHLOEZlCBCig37jf3tWqIBY
+
+curl -X POST https://api.dropboxapi.com/2/files/list_folder \
+    --header "Authorization: Bearer BE8M8EQn2UAAAAAAAAAAE4g7v19VDD4F1uEjy6v_2PkPmpxuTnmtEeJ-EkJ_aDBc" \
+    --header "Content-Type: application/json" \
+    --data "{\"path\": \"/Homework/math\",\"recursive\": false,\"include_media_info\": false,\"include_deleted\": false}"
+    
+path: /Homework/math
+recursive: false
+include_media_info: false
+include_deleted: false

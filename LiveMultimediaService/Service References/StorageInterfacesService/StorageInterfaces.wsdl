@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StorageInterfaces" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/StorageInterfacesData" />
+      <xsd:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IStorageInterfaces_GetLanguages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLanguages" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLanguages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLanguagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLocalization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalization" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLocalization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLocalizationByList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalizationByList" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLocalizationByList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalizationByListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLocalizationElement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalizationElement" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_GetLocalizationElement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalizationElementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_TranslateString_InputMessage">
+    <wsdl:part name="parameters" element="tns:TranslateString" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_TranslateString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TranslateStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_TranslateArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:TranslateArray" />
+  </wsdl:message>
+  <wsdl:message name="IStorageInterfaces_TranslateArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TranslateArrayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IStorageInterfaces">
+    <wsdl:operation name="GetLanguages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLanguages" message="tns:IStorageInterfaces_GetLanguages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLanguagesResponse" message="tns:IStorageInterfaces_GetLanguages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLocalization" message="tns:IStorageInterfaces_GetLocalization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLocalizationResponse" message="tns:IStorageInterfaces_GetLocalization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalizationByList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLocalizationByList" message="tns:IStorageInterfaces_GetLocalizationByList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLocalizationByListResponse" message="tns:IStorageInterfaces_GetLocalizationByList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalizationElement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLocalizationElement" message="tns:IStorageInterfaces_GetLocalizationElement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStorageInterfaces/GetLocalizationElementResponse" message="tns:IStorageInterfaces_GetLocalizationElement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TranslateString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStorageInterfaces/TranslateString" message="tns:IStorageInterfaces_TranslateString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStorageInterfaces/TranslateStringResponse" message="tns:IStorageInterfaces_TranslateString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TranslateArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStorageInterfaces/TranslateArray" message="tns:IStorageInterfaces_TranslateArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStorageInterfaces/TranslateArrayResponse" message="tns:IStorageInterfaces_TranslateArray_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStorageInterfaces" type="tns:IStorageInterfaces">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLanguages">
+      <soap:operation soapAction="http://tempuri.org/IStorageInterfaces/GetLanguages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalization">
+      <soap:operation soapAction="http://tempuri.org/IStorageInterfaces/GetLocalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalizationByList">
+      <soap:operation soapAction="http://tempuri.org/IStorageInterfaces/GetLocalizationByList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalizationElement">
+      <soap:operation soapAction="http://tempuri.org/IStorageInterfaces/GetLocalizationElement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateString">
+      <soap:operation soapAction="http://tempuri.org/IStorageInterfaces/TranslateString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateArray">
+      <soap:operation soapAction="http://tempuri.org/IStorageInterfaces/TranslateArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StorageInterfaces">
+    <wsdl:port name="BasicHttpBinding_IStorageInterfaces" binding="tns:BasicHttpBinding_IStorageInterfaces">
+      <soap:address location="http://service.storageint.com/StorageInterfaces.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

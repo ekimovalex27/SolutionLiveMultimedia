@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMultimediaOAuth" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMultimediaOAuth" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfOAuthObjectFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OAuthObjectFolder" nillable="true" type="tns:OAuthObjectFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOAuthObjectFolder" nillable="true" type="tns:ArrayOfOAuthObjectFolder" />
+  <xs:complexType name="OAuthObjectFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="access_x0020__x0028_shared_with_x0020_object_x0029_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="count" type="xs:int" />
+      <xs:element minOccurs="0" name="created_time" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q1:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="from" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_x0020__x0028_from_x0020_object_x0029_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="is_embeddable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_x0020__x0028_from_x0020_object_x0029_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parent_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="shared_with" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="updated_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="upload_location" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAuthObjectFolder" nillable="true" type="tns:OAuthObjectFolder" />
+  <xs:complexType name="ArrayOfOAuthObjectAudio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OAuthObjectAudio" nillable="true" type="tns:OAuthObjectAudio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOAuthObjectAudio" nillable="true" type="tns:ArrayOfOAuthObjectAudio" />
+  <xs:complexType name="OAuthObjectAudio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="access_x0020__x0028_shared_with_x0020_object_x0029_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="album" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="album_artist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="artist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="comments_count" type="xs:int" />
+      <xs:element minOccurs="0" name="comments_enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="created_time" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q2:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="duration" type="xs:int" />
+      <xs:element minOccurs="0" name="from" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="genre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_x0020__x0028_from_x0020_object_x0029_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="is_embeddable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_x0020__x0028_from_x0020_object_x0029_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parent_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="shared_with" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="size" type="xs:int" />
+      <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="updated_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="upload_location" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAuthObjectAudio" nillable="true" type="tns:OAuthObjectAudio" />
+  <xs:complexType name="OAuthToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="access_token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="authentication_token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="expires_in" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="refresh_token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAuthToken" nillable="true" type="tns:OAuthToken" />
+</xs:schema>

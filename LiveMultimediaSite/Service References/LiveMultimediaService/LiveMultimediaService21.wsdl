@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="LiveMultimediaService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LiveMultimediaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WCFhttps_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="LiveMultimediaService" location="https://service.live-mm.com/LiveMultimediaService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="WCFhttp" type="i0:ILiveMultimediaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocalLogin">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalLogout">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalLogout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetListMultimediaFiles">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetListMultimediaFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalListMultimediaFilesAdd">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalListMultimediaFilesAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalListMultimediaFilesRemove">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalListMultimediaFilesRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLogin">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLogout">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLogout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteRegisterNewUser">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteRegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteUpdateUserInfo">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteUpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListMultimediaSource">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetSettings">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetMultimediaFileGUID">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetMultimediaFileGUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalSetMultimediaFileBuffer">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalSetMultimediaFileBuffer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalSetMultimediaFileAttributes">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalSetMultimediaFileAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OAuthSetToken">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/OAuthSetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistSave">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistLoad">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistDelete">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistItemSave">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistItemSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistItemRemove">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistItemRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguages">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetLanguages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetLocalization">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetLocalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteGetLocalization">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteGetLocalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreadCrumbs">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetBreadCrumbs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthorization">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/CheckAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteCreateMultimediaJob">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteCreateMultimediaJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteCancelMultimediaJob">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteCancelMultimediaJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultimedia">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetMultimedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeMultimedia">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetTypeMultimedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tracing">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/Tracing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraceInformation">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/TraceInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraceWarning">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/TraceWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraceError">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/TraceError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WCFhttps" type="i0:ILiveMultimediaService">
+    <wsp:PolicyReference URI="#WCFhttps_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocalLogin">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalLogout">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalLogout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetListMultimediaFiles">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetListMultimediaFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalListMultimediaFilesAdd">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalListMultimediaFilesAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalListMultimediaFilesRemove">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalListMultimediaFilesRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLogin">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLogout">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLogout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteRegisterNewUser">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteRegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteUpdateUserInfo">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteUpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListMultimediaSource">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetSettings">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetMultimediaFileGUID">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetMultimediaFileGUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalSetMultimediaFileBuffer">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalSetMultimediaFileBuffer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalSetMultimediaFileAttributes">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalSetMultimediaFileAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OAuthSetToken">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/OAuthSetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistSave">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistLoad">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistDelete">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistItemSave">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistItemSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemotePlaylistItemRemove">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemotePlaylistItemRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguages">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetLanguages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetLocalization">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetLocalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteGetLocalization">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteGetLocalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreadCrumbs">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetBreadCrumbs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthorization">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/CheckAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteCreateMultimediaJob">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteCreateMultimediaJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteCancelMultimediaJob">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteCancelMultimediaJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultimedia">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetMultimedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeMultimedia">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetTypeMultimedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tracing">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/Tracing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraceInformation">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/TraceInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraceWarning">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/TraceWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraceError">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/TraceError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LiveMultimediaService">
+    <wsdl:port name="WCFhttp" binding="tns:WCFhttp">
+      <soap:address location="http://service.live-mm.com/LiveMultimediaService.svc" />
+    </wsdl:port>
+    <wsdl:port name="WCFhttps" binding="tns:WCFhttps">
+      <soap:address location="https://service.live-mm.com/LiveMultimediaService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

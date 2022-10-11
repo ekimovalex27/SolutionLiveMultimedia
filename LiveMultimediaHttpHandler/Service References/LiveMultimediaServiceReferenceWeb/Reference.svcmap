@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3eb827d-f2fd-4fb0-9086-9b4d149c71f5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LiveMultimediaService.wsdl" MetadataType="Wsdl" ID="a0efa59a-f644-4ec3-b1a3-8fef0d1bac50" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?wsdl" />
+    <MetadataFile FileName="LiveMultimediaSvc.xsd" MetadataType="Schema" ID="4aaead63-4f44-4cf7-be65-7f2c3cf78ce0" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd3" />
+    <MetadataFile FileName="LiveMultimediaSvc1.xsd" MetadataType="Schema" ID="af6cc687-710d-485f-bf16-af743fa345aa" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd4" />
+    <MetadataFile FileName="LiveMultimediaSvc2.xsd" MetadataType="Schema" ID="1cb23ea7-4272-4293-9736-29a24fa64a95" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd2" />
+    <MetadataFile FileName="LiveMultimediaSvc.wsdl" MetadataType="Wsdl" ID="343c0aa9-db0b-42d4-95e9-d337b84c91ab" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LiveMultimediaSvc3.xsd" MetadataType="Schema" ID="c856d1d9-dd5f-45bc-9554-0fe41ff20b32" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd1" />
+    <MetadataFile FileName="LiveMultimediaSvc.disco" MetadataType="Disco" ID="dd440419-49a5-49c0-8931-d2cf9cfb1c65" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?disco" />
+    <MetadataFile FileName="LiveMultimediaSvc4.xsd" MetadataType="Schema" ID="01f97bc5-645b-4e4a-9d48-a260ef6a6b71" SourceId="1" SourceUrl="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

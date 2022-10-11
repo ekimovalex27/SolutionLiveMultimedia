@@ -1,0 +1,16 @@
+      <StackPanel Background="LightGray">
+        <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="48" Height="50" Background="Transparent" Click="HamburgerButton_Click" Foreground="White"/>
+        <StackPanel x:Name="StackPanelHome" Orientation="Horizontal" PointerEntered="StackPanelHome_PointerEntered" PointerExited="StackPanelHome_PointerExited" PointerPressed="StackPanelHome_PointerPressed">
+          <!--<Button x:Name="MenuHome" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;" Width="48" Height="50" Background="Transparent" Foreground="White" BorderThickness="0"/>-->
+          <TextBlock x:Name="Home2" FontFamily="Segoe MDL2 Assets" Text="&#xE10F;" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+          <TextBlock x:Name="Home" Text="Home" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+        </StackPanel>
+        <StackPanel x:Name="StackPanelLanguage" Orientation="Horizontal" PointerEntered="StackPanelLanguage_PointerEntered" PointerExited="StackPanelLanguage_PointerExited" PointerPressed="StackPanelLanguage_PointerPressed">
+          <Button x:Name="MenuLanguage" FontFamily="Segoe MDL2 Assets" Content="&#xE128;" Width="48" Height="50" Background="Transparent" Foreground="White" BorderThickness="0"/>
+          <TextBlock x:Name="cmdLanguage" Text="Language" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+        </StackPanel>
+        <StackPanel x:Name="StackPanelSettings" Orientation="Horizontal" PointerEntered="StackPanelSettings_PointerEntered" PointerExited="StackPanelSettings_PointerExited" PointerPressed="StackPanelSettings_PointerPressed">
+          <Button x:Name="MenuSettings" FontFamily="Segoe MDL2 Assets" Content="&#xE115;" Width="48" Height="50" Background="Transparent" Foreground="White" BorderThickness="0"/>
+          <TextBlock x:Name="cmdSettings" Text="Settings" FontSize="18" VerticalAlignment="Center" Foreground="White"/>
+        </StackPanel>
+      </StackPanel>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="26bfbdeb-86a6-48d5-8b8d-2636635ff89c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://service.live-mm.com/LiveMultimediaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LiveMultimediaService2.wsdl" MetadataType="Wsdl" ID="faeb5a9b-e82a-467d-a770-bba674bba427" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LiveMultimediaService9.xsd" MetadataType="Schema" ID="3e5f8816-9e50-4d2f-87a9-6eab76d84669" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd5" />
+    <MetadataFile FileName="LiveMultimediaService91.xsd" MetadataType="Schema" ID="425b0fb3-37f0-4660-a7ff-63e4f4813c87" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd6" />
+    <MetadataFile FileName="LiveMultimediaService92.xsd" MetadataType="Schema" ID="449fecec-0719-458c-8045-a2a873501c9c" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd4" />
+    <MetadataFile FileName="LiveMultimediaService21.wsdl" MetadataType="Wsdl" ID="f0cd9e1a-8517-4bc6-bded-a287022a2ad7" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?wsdl" />
+    <MetadataFile FileName="LiveMultimediaService1.disco" MetadataType="Disco" ID="9cf8b2bb-30ee-4b3f-a602-375f32081f30" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?disco" />
+    <MetadataFile FileName="LiveMultimediaService93.xsd" MetadataType="Schema" ID="5ff23fda-d470-4b81-8199-116b93ece9fb" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd7" />
+    <MetadataFile FileName="LiveMultimediaService94.xsd" MetadataType="Schema" ID="f380e46f-6cdc-46cd-b4b6-8c7a48e501c2" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LiveMultimediaService95.xsd" MetadataType="Schema" ID="d51a3432-c30f-4915-bb25-e13963e316a0" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LiveMultimediaService96.xsd" MetadataType="Schema" ID="3e285706-296a-4941-8688-4a5da03cd484" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LiveMultimediaService97.xsd" MetadataType="Schema" ID="c5a05d97-37b7-44b0-96ea-6ef85a33d932" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LiveMultimediaService98.xsd" MetadataType="Schema" ID="0c1927f9-e577-40cd-8a7b-2ce442cfdfbf" SourceId="1" SourceUrl="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest2" Id="46967c5f-f586-4a8c-8a8c-e8c236aecbe2" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest2.fe908229-0bfe-477d-bf3b-0c9972f228de.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="74829a5d-a159-4c33-877a-ff7c626bf89d" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="ww" RecordedValue="ww" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f48ddd40-5b04-49e6-ac07-0454c5b11993" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www" RecordedValue="www" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ea37d41a-6f40-447a-b75d-db5884fb64a4" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www." RecordedValue="www." CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="389233ad-1d4e-467e-b1a8-cd4b16afc186" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www.l" RecordedValue="www.l" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f7f82daf-cc95-4c3b-9f77-ca655df3a5d0" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www.li" RecordedValue="www.li" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8d087fd5-9c7c-41c3-9499-87a125cda4d5" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www.lie" RecordedValue="www.lie" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e6c9d40d-faa0-42d6-a7e2-161c3eba56ff" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www.li" RecordedValue="www.li" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3743089e-7575-4590-b0f6-6af5e18965b6" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="www.liv" RecordedValue="www.liv" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="200" RecordedValue="200" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IE11SS" RecordedValue="IE11SS" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="ru" RecordedValue="ru" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="27d38a89-ce94-468d-a3be-5e03ba3594aa" Version="1.1" Url="http://www.live-mm.com/" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="174a7f35-6f7e-456c-aa04-330d8c779d3e" Version="1.1" Url="http://www.live-mm.com/Demo.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://www.live-mm.com/LiveMultimedia.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://www.live-mm.com/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Извлечь скрытые поля" Description="Извлеките все скрытые поля из отклика и поместите их в контекст теста.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl01" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl01" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="3cfcf080-dea8-47d8-91ea-2fee11c8f50b" Version="1.1" Url="http://www.live-mm.com/LiveMultimedia.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://www.live-mm.com/LiveMultimedia.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="2" DisplayName="Извлечь скрытые поля" Description="Извлеките все скрытые поля из отклика и поместите их в контекст теста.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ctl00$ContentPlaceHolder1$ddlPlaylist" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;My " />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.ctl00$ContentPlaceHolder1$ddlPlaylist" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;My " />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.ctl00$ContentPlaceHolder1$ddlPlaylist" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;My " />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.__ASYNCPOST" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="val=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$ScriptManager1" Value="ctl00$ContentPlaceHolder1$PanelListMultimedia|ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl01" RecordedValue="ctl00$ContentPlaceHolder1$PanelListMultimedia|ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl01" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="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" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="TaXtEhfkAUJr9arfgfsP0psVyPxSydq3FYPvA5Nf2cO9JZQooZxyYuLR+6odYzTR2RcNkqTVIFNl9482g5ppXDm/iWJwW9JorUhqRIej4Qx+LWHJr3itzlWzX2hCIDfIWpihHUizN6sTbJ6BHwgCG2nt0MH7mEJpCXHzfpkO7Nth9myOYAN4E8tjETKRb6ISa75BicqJm+9BVgOOqBmy0JATRoBy3ufidJggm+5sch+8ASeN" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$HiddenFieldGUID" Value="{{$HIDDEN1.ctl00$ContentPlaceHolder1$HiddenFieldGUID}}" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl01" Value="music" RecordedValue="music" CorrelationBinding="{{FormPostParam1.ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl01}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="5f76f58c-2b67-4d1a-a9c2-9c9a8f03c757" Version="1.1" Url="http://www.live-mm.com/LiveMultimedia.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://www.live-mm.com/LiveMultimedia.aspx" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$HiddenFieldGUID" Value="{{$HIDDEN1.ctl00$ContentPlaceHolder1$HiddenFieldGUID}}" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$ddlPlaylist" Value="13" RecordedValue="13" CorrelationBinding="{{FormPostParam2.ctl00$ContentPlaceHolder1$ddlPlaylist}}" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN2.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN2.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN2.__VIEWSTATE}}" RecordedValue="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" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__CALLBACKID" Value="__Page" RecordedValue="__Page" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__CALLBACKPARAM" Value="1162108F-D1B9-486F-B765-300EE3C9F85C*99ADA1F7-8BB7-490F-92DC-DBCCBFA2AF37*1*mp3" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C*99ADA1F7-8BB7-490F-92DC-DBCCBFA2AF37*1*mp3" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN2.__EVENTVALIDATION}}" RecordedValue="b6L1tsbxb/Fc3G7V4qne/g0c3ipBdmsqfSYRgPdLEuJAdcqqadKYev8DROomsISqsaW0b/PqOVZIxtfdyGWpFOTO97DeYOTvxsuQWw71JLGSjrX3J4/9M/n4fM4A51wb3sPMLKOJD9o0RCXPH+JP+12TxFp68bE6+E16ieZX/2tKP9eu9Z6Q8tEtmpzx/ol3nYU7is0o/3tgiBjLXygXgdriZYSGdrUfNfNkRN6agp3Gt7IITzNipfgGJd6z4LVJXW1VMmHdimt2bsrQfLdhUFbrfrRK/bBcpjWNkGz0OW2M7db+qHvepTi8A8ZH206VpJqVYjhx+9TGW7ec0514ABu81Wmh0x9dgf1uLBrjRqs+akOGWvTqCeB5+TnnDNlQExIIDqv/Um5JPFelY6aQu8nSsQO47YK7HUQSD4GOZNIikotF" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="c68eba67-c411-4018-a91f-f91fb514c5a1" Version="1.1" Url="http://www.live-mm.com/GetMultimedia.ashx" ThinkTime="88" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://www.live-mm.com/LiveMultimedia.aspx" />
+        <Header Name="Pragma" Value="getIfoFileURI.dlna.org" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="GUID" Value="1162108F-D1B9-486F-B765-300EE3C9F85C*99ADA1F7-8BB7-490F-92DC-DBCCBFA2AF37*1*mp3" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C*99ADA1F7-8BB7-490F-92DC-DBCCBFA2AF37*1*mp3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="f3d2d078-0540-496a-9ba9-89609174a33a" Version="1.1" Url="http://www.live-mm.com/LiveMultimedia.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://www.live-mm.com/LiveMultimedia.aspx" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$HiddenFieldGUID" Value="{{$HIDDEN1.ctl00$ContentPlaceHolder1$HiddenFieldGUID}}" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$ddlPlaylist" Value="13" RecordedValue="13" CorrelationBinding="{{FormPostParam3.ctl00$ContentPlaceHolder1$ddlPlaylist}}" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN2.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN2.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN2.__VIEWSTATE}}" RecordedValue="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" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__CALLBACKID" Value="__Page" RecordedValue="__Page" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__CALLBACKPARAM" Value="1162108F-D1B9-486F-B765-300EE3C9F85C*40BDD4AC-88EC-4E6D-A517-C63571B025DC*1*mp3" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C*40BDD4AC-88EC-4E6D-A517-C63571B025DC*1*mp3" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="3CqjTFdhMiZlv9NnvXKTMyQyRGJ4fGgfUIrLlii5rQlFXNi9uBOLYKMoJdFttiZ/AXV+ZZpGiLVNKvCgPqzj5gQ6n8S0ZflT4eruw37hXgfrGbBDW2ObUvU9wY8wBG5GdDl6qjLCVcoh4M7ngqhq2FXrpAqBKBxr/CRe9kSrSp9JTkT3WTUGVnX8FfCV3kDMnLZQm230dPBumey7orCu4d93aLUzjzgfbMIK8WHmEHaJyj+J3yVMEHgZoI1yTk7LYHLH14kxX87aogbN5oU1Wta+9wAftclUbmr0BQJ+0Gbge6qLEzuYBAHyTsqx/z3DqFo223enbDAqjXGaZEhub5kEwSxezs+rYSGA6mJtAm0KBmF8WQddrglvMx0mn7jSb3YrQYlL1OP/HuomC2CDl5OaNUtaVgmK/OXmXXXPeWCpP13v" RecordedValue="3CqjTFdhMiZlv9NnvXKTMyQyRGJ4fGgfUIrLlii5rQlFXNi9uBOLYKMoJdFttiZ/AXV+ZZpGiLVNKvCgPqzj5gQ6n8S0ZflT4eruw37hXgfrGbBDW2ObUvU9wY8wBG5GdDl6qjLCVcoh4M7ngqhq2FXrpAqBKBxr/CRe9kSrSp9JTkT3WTUGVnX8FfCV3kDMnLZQm230dPBumey7orCu4d93aLUzjzgfbMIK8WHmEHaJyj+J3yVMEHgZoI1yTk7LYHLH14kxX87aogbN5oU1Wta+9wAftclUbmr0BQJ+0Gbge6qLEzuYBAHyTsqx/z3DqFo223enbDAqjXGaZEhub5kEwSxezs+rYSGA6mJtAm0KBmF8WQddrglvMx0mn7jSb3YrQYlL1OP/HuomC2CDl5OaNUtaVgmK/OXmXXXPeWCpP13v" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="b86c47aa-a520-4cd1-b2c9-321d317acc80" Version="1.1" Url="http://www.live-mm.com/LiveMultimedia.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://www.live-mm.com/LiveMultimedia.aspx" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$ScriptManager1" Value="ctl00$ContentPlaceHolder1$PanelListMultimedia|ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00" RecordedValue="ctl00$ContentPlaceHolder1$PanelListMultimedia|ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$HiddenFieldGUID" Value="{{$HIDDEN1.ctl00$ContentPlaceHolder1$HiddenFieldGUID}}" RecordedValue="1162108F-D1B9-486F-B765-300EE3C9F85C" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$ddlPlaylist" Value="13" RecordedValue="13" CorrelationBinding="{{FormPostParam5.ctl00$ContentPlaceHolder1$ddlPlaylist}}" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN2.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN2.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN2.__VIEWSTATE}}" RecordedValue="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" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="Yr9IzUBVCbEtooPPY5LIXNZykgRbiYzXengZsh1jZAnUYQRUNUmXap9isWY4gUfo843xLBWbeY6kXggVxRDL+jm5ioorCDLMR1hHe6oVzzTuzvoP/EhFZdbeSFzGoNLwmjyganouGqv2n3/Wvj+zBK8O61c8kIQ239Bs392sndJop8l9vtxUrCY1DlYHesKxJ3/NQgpYkSj94R7J9JHxwx34mx1zoDU/IcstylRxmu4XNjTTdac7/RfYgNFFM7J0bmptY9/fzwTUF9fnZSbK3jKJuzuxdNpBJHIiaV+AT5navg8n+d0xHKtqpfbbFi5FE8ueL9GuxCVSEx1X53FohTO4GXdEDHtTcidH36VHU1lcG69MLgFQbvaNWp+6JLAaQqt/mcTQTEvUwT1nHmrRrc7LcVs8+VDxPB5g0bh1gXwFcn0z" RecordedValue="Yr9IzUBVCbEtooPPY5LIXNZykgRbiYzXengZsh1jZAnUYQRUNUmXap9isWY4gUfo843xLBWbeY6kXggVxRDL+jm5ioorCDLMR1hHe6oVzzTuzvoP/EhFZdbeSFzGoNLwmjyganouGqv2n3/Wvj+zBK8O61c8kIQ239Bs392sndJop8l9vtxUrCY1DlYHesKxJ3/NQgpYkSj94R7J9JHxwx34mx1zoDU/IcstylRxmu4XNjTTdac7/RfYgNFFM7J0bmptY9/fzwTUF9fnZSbK3jKJuzuxdNpBJHIiaV+AT5navg8n+d0xHKtqpfbbFi5FE8ueL9GuxCVSEx1X53FohTO4GXdEDHtTcidH36VHU1lcG69MLgFQbvaNWp+6JLAaQqt/mcTQTEvUwT1nHmrRrc7LcVs8+VDxPB5g0bh1gXwFcn0z" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam6.__ASYNCPOST}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00" Value="Home Albums" RecordedValue="Home Albums" CorrelationBinding="{{FormPostParam4.ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="001012e1-9270-4c8b-80b4-da7ec3ff9e68" Version="1.1" Url="http://www.live-mm.com/Logout.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://www.live-mm.com/Default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://www.live-mm.com/LiveMultimedia.aspx" />
+      </Headers>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="URL-адрес отклика" Description="Проверка того, что URL-адрес отклика после выполнения перенаправлений такой же, как записанный URL-адрес отклика.  Параметры QueryString игнорируются." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Целевое время отклика" Description="Проверка на превышение временем отклика на запрос эталона времени отклика, указанного в запросе.  Цели времени отклика, равные нулю, будут пропущены." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

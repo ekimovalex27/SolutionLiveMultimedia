@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="LiveMultimediaService.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="LiveMultimediaService" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="Endpoint2" endpointName="Endpoint2" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InputEndpoint name="Endpoint2" protocol="https" port="443" certificate="StartSSL service.live-mm.com" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="LiveMultimediaService.svclog" sizeInMB="1000" cleanOnRoleRecycle="false" />
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="MultimediaFileBufferLength" />
+      <Setting name="DelayRequestMilliseconds" />
+      <Setting name="DelayMaxSeconds" />
+      <Setting name="DelayErrorSeconds" />
+      <Setting name="IdleTimeSeconds" />
+      <Setting name="StorageConnectionString" />
+      <Setting name="WaitTimeReplySeconds" />
+      <Setting name="MaxConnection" />
+      <Setting name="MaxCountRequestInQueue" />
+      <Setting name="SmtpFrom" />
+      <Setting name="SmtpBcc" />
+      <Setting name="SmtpHost" />
+      <Setting name="SmtpPort" />
+      <Setting name="SmtpEnableSsl" />
+      <Setting name="SmtpDefaultCredentials" />
+      <Setting name="SmtpUserName" />
+      <Setting name="SmtpPassword" />
+      <Setting name="IsDebugWrite" />
+      <Setting name="IsRefreshTranslate" />
+      <Setting name="UrlMultimediaService" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="StartSSL service.live-mm.com" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/StorageInterfacesData" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Specialized" />
+  <xs:complexType name="TupleOfstringstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="m_Item1" nillable="true" type="xs:string" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfstringstring" nillable="true" type="tns:TupleOfstringstring" />
+  <xs:complexType name="TupleOfArrayOfMultimediaFilestringtBw5ECsG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfMultimediaFile" Namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LiveMultimediaData" name="m_Item1" nillable="true" type="q1:ArrayOfMultimediaFile" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfArrayOfMultimediaFilestringtBw5ECsG" nillable="true" type="tns:TupleOfArrayOfMultimediaFilestringtBw5ECsG" />
+  <xs:complexType name="TupleOfArrayOfstringstring9_SUPjmKX">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfstring" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="m_Item1" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfArrayOfstringstring9_SUPjmKX" nillable="true" type="tns:TupleOfArrayOfstringstring9_SUPjmKX" />
+  <xs:complexType name="TupleOfArrayOfLanguageInfostring58IzrCRE">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfLanguageInfo" Namespace="http://schemas.datacontract.org/2004/07/StorageInterfacesData" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/StorageInterfacesData" name="m_Item1" nillable="true" type="q3:ArrayOfLanguageInfo" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfArrayOfLanguageInfostring58IzrCRE" nillable="true" type="tns:TupleOfArrayOfLanguageInfostring58IzrCRE" />
+  <xs:complexType name="TupleOfArrayOfLocalizationElementstringstringfpVz983_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{2}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfLocalizationElement" Namespace="http://schemas.datacontract.org/2004/07/StorageInterfacesData" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/StorageInterfacesData" name="m_Item1" nillable="true" type="q4:ArrayOfLocalizationElement" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+      <xs:element name="m_Item3" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfArrayOfLocalizationElementstringstringfpVz983_S" nillable="true" type="tns:TupleOfArrayOfLocalizationElementstringstringfpVz983_S" />
+  <xs:complexType name="TupleOfArrayOfMultimediaItemstringtBw5ECsG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfMultimediaItem" Namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LiveMultimediaData" name="m_Item1" nillable="true" type="q5:ArrayOfMultimediaItem" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfArrayOfMultimediaItemstringtBw5ECsG" nillable="true" type="tns:TupleOfArrayOfMultimediaItemstringtBw5ECsG" />
+  <xs:complexType name="TupleOfArrayOfBreadCrumpsstringtBw5ECsG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfBreadCrumps" Namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LiveMultimediaData" name="m_Item1" nillable="true" type="q6:ArrayOfBreadCrumps" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfArrayOfBreadCrumpsstringtBw5ECsG" nillable="true" type="tns:TupleOfArrayOfBreadCrumpsstringtBw5ECsG" />
+  <xs:complexType name="TupleOfStringDictionarystringuD3OFVg8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="StringDictionary" Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Specialized" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.Collections.Specialized" name="m_Item1" nillable="true" type="q7:StringDictionary" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfStringDictionarystringuD3OFVg8" nillable="true" type="tns:TupleOfStringDictionarystringuD3OFVg8" />
+  <xs:complexType name="TupleOfLocalizationElementstring58IzrCRE">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LocalizationElement" Namespace="http://schemas.datacontract.org/2004/07/StorageInterfacesData" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/StorageInterfacesData" name="m_Item1" nillable="true" type="q8:LocalizationElement" />
+      <xs:element name="m_Item2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfLocalizationElementstring58IzrCRE" nillable="true" type="tns:TupleOfLocalizationElementstring58IzrCRE" />
+</xs:schema>

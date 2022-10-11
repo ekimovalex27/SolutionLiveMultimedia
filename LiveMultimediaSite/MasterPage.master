@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPage" Codebehind="MasterPage.master.cs" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="pragma" content="no-store"/>
+<meta name="Author" content="Aleksei Ekimov"/>
+<meta name="copyright" content="&copy; 2012-<%: DateTime.Now.Year %> Live Multimedia Market. Aleksei Ekimov. Jet Software And Service."/>
+<meta name="keywords" content="multimedia,audio,video,photo,images,live multimedia,live multimedia market,onedrive,google drive,dropbox,vkontakte,cloud,cloud storage"/>
+<meta name="robots" content="all"/>
+<meta name="description" content="Live Multimedia Market allow you get access to your multimedia files from any device across Internet"/>
+
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+
+<title>Live Multimedia Market</title>
+<link href="Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54391301-4', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+  <form id="form1" runat="server">
+
+    <div id="masterTitle" class="MasterTitle">
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align: left"><a class="MasterTitleLeft" href="Default.aspx">Live Multimedia Market</a></td>
+          <td style="text-align: right">
+            <asp:Panel ID="PanelTopMenu" runat="server"></asp:Panel>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+
+    <asp:PlaceHolder ID="PlaceHolderBottom" runat="server"></asp:PlaceHolder>
+
+  </form>
+</body>
+</html>

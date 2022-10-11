@@ -1,0 +1,472 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Video events example</title>
+    <!-- Uncomment the following meta tag if you have issues rendering this page on an intranet or local site. -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"/> -->
+</head>
+<body>
+    <div>
+        <label>
+            Type or paste a video URL: <br />
+            <input type="text" id="videoFile" style="width: 300px;" title="video file input field" value="http://storage.live-mm.com/videoeng/small.mp4" />
+            <button id="loadVideo" title="Load video button">Load</button>
+        </label>
+    </div>
+
+    <!--<video id="Video1" controls style="border: 1px solid blue;" height="240" width="320" title="video element">-->
+
+    <style>
+.Spinner {
+    display: block;
+    padding: 0px;
+
+    float:none;
+    position:sticky;
+    opacity: 0.5;
+    text-align:center;
+}
+
+.centered {
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	display: block;
+	pointer-events:inherit;
+    /*pointer-events: auto;*/
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+    </style>
+
+    <!--<div id="videospinner">
+        <video id="Video1" controls="controls" style="border: 1px solid blue;" title="video element" onerror="LiveAudio_onerror(this)" class="centered">
+            HTML5 Video is required for this example
+        </video>
+        <img id="spinner" src="spinner.gif" alt="Alternate Text" hidden="hidden" class="Spinner" />
+     </div>-->
+
+    <div>
+        <a href="#openModal">Открыть модальное окно</a>
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Закрыть" class="close">X</a>
+                <h2>Модальное окно</h2>
+                <p>Пример простого модального окна, которое может быть создано с использованием CSS3</p>
+
+                <video id="Video1" controls="controls" style="border:none;" title="video element" onerror="LiveAudio_onerror(this)" class="centered">
+                    HTML5 Video is required for this example
+                </video>
+                <img id="spinner" src="spinner.gif" alt="Alternate Text" hidden="hidden" class="Spinner" />
+            </div>
+
+            <script>
+                document.getElementById("openModal").addEventListener("select", function () {
+                    a = 1;
+                }, false);
+
+                document.getElementById("openModal").addEventListener("reset", function () {
+                    a = 2;
+                }, false);
+
+                document.getElementById("openModal").addEventListener("resize", function () {
+                    a = 3;
+                }, false);
+
+                document.getElementById("openModal").addEventListener("load", function () {
+                    a = 4;
+                }, false);
+
+                //document.getElementById("openModal").addEventListener("activate", function () {
+                //    a = 5;
+                //}, false);
+
+                //document.getElementById("openModal").addEventListener("focus", function () {
+                //    a = 6;
+                //}, false);
+
+                //var video = document.getElementById("Video1");
+                //var fileURL = document.getElementById("videoFile").value; // get input field
+                //video.src = fileURL;
+                //video.load();  // if HTML source element is used
+                //video.play();
+
+            </script>
+        </div>
+    </div>
+
+<div id="buttonbar" style="display: none; font-size:larger;" )>
+<button id="restart" title="Restart button">[]</button>
+<button id="slower" title="Slower playback button">-</button>
+<button id="rew" title="Rewind button">&lt;&lt;</button>
+<button id="play" title="Play button">&gt;</button>
+<button id="fwd" title="Forward button">&gt;&gt;</button>
+<button id="faster" title="Faster playback button">+</button>
+<button id="mute" title="Mute button"><img alt="Volume on button" src="vol2.png" /></button>
+<br />
+<label>Reset playback rate: </label><button id="normal" title="Reset playback rate button">=</button>
+<br />
+<label>  Volume: </label>
+<button id="volDn" title="Volume down button">-</button>
+<button id="volUp" title="Volume up button">+</button>
+<br />
+<div id="status">
+    Length(seconds): <span id="vLen"></span> <br />
+    Current time:  <span id="curTime" title="Current time"></span><br />   Remaining time: <span id="vRemaining" title="Remaining time"></span>
+</div>
+</div>
+
+<br />
+
+<div title="Error message area" id="errorMsg" style="color:Red;"></div>
+
+<div title="Event status area">
+<label>oncanplaythrough: </label><span class="stats" id="cpt"></span><br />
+<label>onloadstart: </label><span class="stats" id="ls"></span><br />
+<label>onprogress: </label><span class="stats" id="pg"></span><br />
+<label>onloadeddata: </label><span class="stats" id="ld"></span><br />
+<label>onended: </label><span class="stats" id="ndd"></span><br />
+<label>onemptied: </label><span class="stats" id="mt"></span><br />
+<label>onstalled: </label><span class="stats" id="stall"></span><br />
+<label>onwaiting: </label><span class="stats" id="waiting"></span><br />
+<label>ondurationchange: </label><span class="stats" id="dc"></span><br />
+<label>Mouse:</label><br />
+<label>mousedown: </label><span class="stats" id="mousedown"></span><br />
+<label>mousemove: </label><span class="stats" id="mousemove"></span><br />
+<label>mouseout: </label><span class="stats" id="mouseout"></span><br />
+<label>mouseover: </label><span class="stats" id="mouseover"></span><br />
+<label>mouseup: </label><span class="stats" id="mouseup"></span><br />
+</div>
+
+  <script>
+      var video = document.getElementById("Video1");
+      var vLength;
+      var pgFlag = ""; // used for progress tracking
+      if (video.canPlayType) {   // tests that we have HTML5 video support
+
+        //getVideo();
+        //video.play();
+
+        //  video button helper functions
+        //  play video
+        function vidplay(evt) {
+          if (video.src == "") {  // inital source load
+            getVideo();
+          }
+          if (video.paused) {   // play the file, and display pause symbol
+            video.play();
+          } else {              // pause the file, and display play symbol
+            video.pause();
+          }
+        }
+
+        //  load video file from input field
+        function getVideo() {
+          var fileURL = document.getElementById("videoFile").value; // get input field
+          if (fileURL != "") {
+            video.src = fileURL;
+            video.load();  // if HTML source element is used
+            document.getElementById("play").click();  // start play
+
+            location.href = "#openModal";
+          }
+        }
+
+        //  button helper functions
+        //  skip forward, backward, or restart
+        function setTime(tValue) {
+          //  if no video is loaded, this throws an exception
+          try {
+            if (tValue == 0) {
+              video.currentTime = tValue;
+            }
+            else {
+              video.currentTime += tValue;
+            }
+
+          } catch (err) {
+            // errMessage(err) // show exception
+            errMessage("Video content might not be loaded");
+          }
+        }
+
+        // change volume based on incoming value
+        function setVol(value) {
+          var vol = video.volume;
+          vol += value;
+          //  test for range 0 - 1 to avoid exceptions
+          if (vol >= 0 && vol <= 1) {
+            // if valid value, use it
+            video.volume = vol;
+          } else {
+            // otherwise substitute a 0 or 1
+            video.volume = (vol < 0) ? 0 : 1;
+          }
+        }
+
+        //  button events
+        //  Play
+        document.getElementById("play").addEventListener("click", vidplay, false);
+
+        //  Restart
+        document.getElementById("restart").addEventListener("click", function () {
+          setTime(0);
+        }, false);
+
+        //  Skip backward 10 seconds
+        document.getElementById("rew").addEventListener("click", function () {
+          setTime(-10);
+        }, false);
+
+        //  Skip forward 10 seconds
+        document.getElementById("fwd").addEventListener("click", function () {
+          setTime(10);
+        }, false);
+
+        //  set src == latest video file URL
+        document.getElementById("loadVideo").addEventListener("click", getVideo, false);
+
+        // volume buttons
+        document.getElementById("volDn").addEventListener("click", function () {
+          setVol(-.1); // down by 10%
+        }, false);
+
+        document.getElementById("volUp").addEventListener("click", function () {
+          setVol(.1);  // up by 10%
+        }, false);
+
+        // playback speed buttons
+        document.getElementById("slower").addEventListener("click", function () {
+          video.playbackRate -= .25;
+        }, false);
+
+        document.getElementById("faster").addEventListener("click", function () {
+          video.playbackRate += .25;
+        }, false);
+
+        document.getElementById("normal").addEventListener("click", function () {
+          video.playbackRate = 1;
+        }, false);
+
+        document.getElementById("mute").addEventListener("click", function (evt) {
+          if (video.muted) {
+            video.muted = false;
+          } else {
+            video.muted = true;
+          }
+        }, false);
+
+        ////  any video error will fail with message
+        //video.addEventListener("error", function (err) {
+        //    document.getElementById("spinner").hidden = "hidden";
+        //  errMessage(err);
+        //}, true);
+
+        // content has loaded, display buttons and set up events
+        video.addEventListener("canplay", function () {
+          document.getElementById("buttonbar").style.display = "block";
+        }, false);
+
+        //  display video duration when available
+        video.addEventListener("loadedmetadata", function () {
+          vLength = video.duration.toFixed(1);
+          document.getElementById("vLen").textContent = vLength; // global variable
+        }, false);
+
+        //  display the current and remaining times
+        video.addEventListener("timeupdate", function () {
+          //  Current time
+          var vTime = video.currentTime;
+          document.getElementById("curTime").textContent = vTime.toFixed(1);
+          document.getElementById("vRemaining").textContent = (vLength - vTime).toFixed(1);
+        }, false);
+
+        //  paused and playing events to control buttons
+        video.addEventListener("pause", function () {
+          document.getElementById("spinner").hidden = "hidden";
+          document.getElementById("play").textContent = ">";
+        }, false);
+
+        video.addEventListener("playing", function () {
+          document.getElementById("play").textContent = "||";
+        }, false);
+
+        video.addEventListener("volumechange", function () {
+          if (video.muted) {
+            // if muted, show mute image
+            document.getElementById("mute").innerHTML = "<img alt='volume off button' src='mute2.png' />";
+          } else {
+            // if not muted, show not muted image
+            document.getElementById("mute").innerHTML = "<img alt='volume on button' src='vol2.png' />";
+          }
+        }, false);
+
+        //  Download and playback status events.
+        video.addEventListener("loadstart", function () {
+          document.getElementById("spinner").hidden = "";
+          document.getElementById("ls").textContent = "Started";
+        }, false);
+
+        video.addEventListener("loadeddata", function () {
+          document.getElementById("spinner").hidden = "hidden";
+          document.getElementById("ld").textContent = "Data was loaded";
+        }, false);
+
+        video.addEventListener("ended", function () {
+          document.getElementById("spinner").hidden = "hidden";
+          document.getElementById("ndd").textContent = "Playback ended";
+        }, false);
+
+        video.addEventListener("emptied", function () {
+          document.getElementById("spinner").hidden = "hidden";
+          document.getElementById("mt").textContent = "Video reset";
+        }, false);
+
+        video.addEventListener("stalled", function () {
+          document.getElementById("spinner").hidden = "";
+          document.getElementById("stall").textContent = "Download was stalled";
+        }, false);
+
+        video.addEventListener("waiting", function () {
+          document.getElementById("spinner").hidden = "";
+          document.getElementById("waiting").textContent = "Player waited for content";
+        }, false);
+
+        video.addEventListener("progress", function () {
+          pgFlag += "+";
+          if (pgFlag.length > 10) {
+            pgFlag = "+";
+          }
+          document.getElementById("pg").textContent = pgFlag;
+
+        }, false);
+
+        video.addEventListener("durationchange", function () {
+          document.getElementById("dc").textContent = "Duration has changed";
+        }, false);
+
+        video.addEventListener("error", function () {
+          document.getElementById("spinner").hidden = "hidden";
+
+        }, false);
+
+
+        video.addEventListener("suspend", function () {
+          //document.getElementById("spinner").hidden = "";
+          a = 2;
+
+        }, false);
+
+        video.addEventListener("canplaythrough", function () {
+          document.getElementById("cpt").textContent = "Ready to play whole video";
+        }, false);
+
+        video.addEventListener("mousedown", function () {
+          document.getElementById("mousedown").textContent = "mousedown";
+        }, false);
+
+        video.addEventListener("mousemove", function () {
+          document.getElementById("mousemove").textContent = "mousemove";
+        }, false);
+
+        video.addEventListener("mouseout", function () {
+          document.getElementById("mouseout").textContent = "mouseout";
+        }, false);
+
+        video.addEventListener("mouseover", function () {
+          document.getElementById("mouseover").textContent = "mouseover";
+        }, false);
+
+        video.addEventListener("mouseup", function () {
+          document.getElementById("mouseup").textContent = "mouseup";
+        }, false);
+
+      } else {
+        errMessage("HTML5 Video is required for this example");
+        // end of runtime
+      }
+
+      function LiveAudio_onerror(e) {
+        var message;
+        document.getElementById("spinner").hidden = "hidden";
+        switch (e.error.code) {
+          case 1: //MEDIA_ERR_ABORTED
+            message = "ERROR ABORTED";
+            break;
+          case 2: //MEDIA_ERR_NETWORK
+            message = "ERROR NETWORK";
+            break;
+          case 3: //MEDIA_ERR_DECODE
+            message = "ERROR DECODE";
+            break;
+          case 4: //MEDIA_ERR_SRC_NOT_SUPPORTED
+            message = "NOT SUPPORTED";
+            break;
+          default:
+            message = "Undefined error code";
+            break;
+        }
+      }
+
+      //  display an error message
+      function errMessage(msg) {
+        // displays an error message for 5 seconds then clears it
+        document.getElementById("errorMsg").textContent = msg;
+        setTimeout("document.getElementById('errorMsg').textContent=''", 5000);
+      }
+  </script>
+
+</body>
+</html>

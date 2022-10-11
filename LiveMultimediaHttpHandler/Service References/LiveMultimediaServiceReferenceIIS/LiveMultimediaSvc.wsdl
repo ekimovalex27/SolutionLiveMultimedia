@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="LiveMultimediaService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="LiveMultimediaService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="LiveMultimediaService/Imports">
+      <xsd:import schemaLocation="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd0" namespace="LiveMultimediaService" />
+      <xsd:import schemaLocation="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+      <xsd:import schemaLocation="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILiveMultimediaService_LocalLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocalLogin" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocalLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalCheckRequestMultimediaFromServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocalCheckRequestMultimediaFromServer" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalCheckRequestMultimediaFromServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocalCheckRequestMultimediaFromServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalGetListMultimediaFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocalGetListMultimediaFiles" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalGetListMultimediaFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocalGetListMultimediaFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalSaveListMultimediaFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocalSaveListMultimediaFiles" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_LocalSaveListMultimediaFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocalSaveListMultimediaFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteLogin" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteRegisterNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteRegisterNewUser" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteRegisterNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteRegisterNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteTransferMultimediaFileGUIDFromServerToClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteTransferMultimediaFileGUIDFromServerToClient" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteTransferMultimediaFileGUIDFromServerToClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteTransferMultimediaFileGUIDFromServerToClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_InsertMessageStreamChunkCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageStreamChunkCount" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_InsertMessageStreamChunkCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageStreamChunkCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteLiveMultimedia_Next_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteLiveMultimedia_Next" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteLiveMultimedia_Next_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteLiveMultimedia_NextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteLiveMultimedia_Unload_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteLiveMultimedia_Unload" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteLiveMultimedia_Unload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteLiveMultimedia_UnloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteGetContentMultimediaSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteGetContentMultimediaSource" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteGetContentMultimediaSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteGetContentMultimediaSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_GetListMultimediaSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListMultimediaSource" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_GetListMultimediaSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListMultimediaSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_GetListMultimediaByAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListMultimediaByAlbum" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_GetListMultimediaByAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListMultimediaByAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteSetMultimediaFilebyUserToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteSetMultimediaFilebyUserToken" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteSetMultimediaFilebyUserToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteSetMultimediaFilebyUserTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteGetMultimediaFilebyUserToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteGetMultimediaFilebyUserToken" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_RemoteGetMultimediaFilebyUserToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoteGetMultimediaFilebyUserTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_WriteLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLog" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_WriteLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_SendFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendFile" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_SendFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_ReadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFile" />
+  </wsdl:message>
+  <wsdl:message name="ILiveMultimediaService_ReadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILiveMultimediaService">
+    <wsdl:operation name="LocalLogin">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalLogin" message="tns:ILiveMultimediaService_LocalLogin_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalLoginResponse" message="tns:ILiveMultimediaService_LocalLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocalCheckRequestMultimediaFromServer">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalCheckRequestMultimediaFromServer" message="tns:ILiveMultimediaService_LocalCheckRequestMultimediaFromServer_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalCheckRequestMultimediaFromServerResponse" message="tns:ILiveMultimediaService_LocalCheckRequestMultimediaFromServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetListMultimediaFiles">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalGetListMultimediaFiles" message="tns:ILiveMultimediaService_LocalGetListMultimediaFiles_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalGetListMultimediaFilesResponse" message="tns:ILiveMultimediaService_LocalGetListMultimediaFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocalSaveListMultimediaFiles">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalSaveListMultimediaFiles" message="tns:ILiveMultimediaService_LocalSaveListMultimediaFiles_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/LocalSaveListMultimediaFilesResponse" message="tns:ILiveMultimediaService_LocalSaveListMultimediaFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLogin">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteLogin" message="tns:ILiveMultimediaService_RemoteLogin_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteLoginResponse" message="tns:ILiveMultimediaService_RemoteLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteRegisterNewUser">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteRegisterNewUser" message="tns:ILiveMultimediaService_RemoteRegisterNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteRegisterNewUserResponse" message="tns:ILiveMultimediaService_RemoteRegisterNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteTransferMultimediaFileGUIDFromServerToClient">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteTransferMultimediaFileGUIDFromServerToClient" message="tns:ILiveMultimediaService_RemoteTransferMultimediaFileGUIDFromServerToClient_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteTransferMultimediaFileGUIDFromServerToClientResponse" message="tns:ILiveMultimediaService_RemoteTransferMultimediaFileGUIDFromServerToClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageStreamChunkCount">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/InsertMessageStreamChunkCount" message="tns:ILiveMultimediaService_InsertMessageStreamChunkCount_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/InsertMessageStreamChunkCountResponse" message="tns:ILiveMultimediaService_InsertMessageStreamChunkCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLiveMultimedia_Next">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteLiveMultimedia_Next" message="tns:ILiveMultimediaService_RemoteLiveMultimedia_Next_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteLiveMultimedia_NextResponse" message="tns:ILiveMultimediaService_RemoteLiveMultimedia_Next_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLiveMultimedia_Unload">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteLiveMultimedia_Unload" message="tns:ILiveMultimediaService_RemoteLiveMultimedia_Unload_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteLiveMultimedia_UnloadResponse" message="tns:ILiveMultimediaService_RemoteLiveMultimedia_Unload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteGetContentMultimediaSource">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteGetContentMultimediaSource" message="tns:ILiveMultimediaService_RemoteGetContentMultimediaSource_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteGetContentMultimediaSourceResponse" message="tns:ILiveMultimediaService_RemoteGetContentMultimediaSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListMultimediaSource">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaSource" message="tns:ILiveMultimediaService_GetListMultimediaSource_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaSourceResponse" message="tns:ILiveMultimediaService_GetListMultimediaSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListMultimediaByAlbum">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaByAlbum" message="tns:ILiveMultimediaService_GetListMultimediaByAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaByAlbumResponse" message="tns:ILiveMultimediaService_GetListMultimediaByAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteSetMultimediaFilebyUserToken">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteSetMultimediaFilebyUserToken" message="tns:ILiveMultimediaService_RemoteSetMultimediaFilebyUserToken_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteSetMultimediaFilebyUserTokenResponse" message="tns:ILiveMultimediaService_RemoteSetMultimediaFilebyUserToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoteGetMultimediaFilebyUserToken">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteGetMultimediaFilebyUserToken" message="tns:ILiveMultimediaService_RemoteGetMultimediaFilebyUserToken_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/RemoteGetMultimediaFilebyUserTokenResponse" message="tns:ILiveMultimediaService_RemoteGetMultimediaFilebyUserToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLog">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/WriteLog" message="tns:ILiveMultimediaService_WriteLog_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/WriteLogResponse" message="tns:ILiveMultimediaService_WriteLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/SendFile" message="tns:ILiveMultimediaService_SendFile_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/SendFileResponse" message="tns:ILiveMultimediaService_SendFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadFile">
+      <wsdl:input wsaw:Action="LiveMultimediaService/ILiveMultimediaService/ReadFile" message="tns:ILiveMultimediaService_ReadFile_InputMessage" />
+      <wsdl:output wsaw:Action="LiveMultimediaService/ILiveMultimediaService/ReadFileResponse" message="tns:ILiveMultimediaService_ReadFile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

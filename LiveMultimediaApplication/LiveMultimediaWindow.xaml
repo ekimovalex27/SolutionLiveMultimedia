@@ -1,0 +1,53 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:LiveMultimediaService="clr-namespace:LiveMultimediaApplication.LiveMultimediaService" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="LiveMultimediaApplication.LiveMultimediaWindow"
+        Title="Live Multimedia Server" Height="526" Width="697.815" WindowStartupLocation="CenterScreen" Closing="Window_Closing" IsHitTestVisible="True" ShowInTaskbar="False" KeyDown="Window_KeyDown">
+  <Grid x:Name="GridLiveMultimediaSystem" Margin="2,10,0,9">
+    <ListBox x:Name="lbMultimedia" MouseRightButtonUp="lbMultimedia_MouseRightButtonUp" Margin="6,130,6,38" SelectionMode="Extended" IsTextSearchEnabled="False" DisplayMemberPath="FullPath">
+      <ListBox.DataContext>
+        <LiveMultimediaService:MultimediaFile/>
+      </ListBox.DataContext>
+    </ListBox>
+    <Label x:Name="lblUsername" Content="Username" HorizontalAlignment="Left" Margin="6,64,0,0" VerticalAlignment="Top" BorderBrush="White" Width="101" Height="23"/>
+    <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="6,92,0,0" VerticalAlignment="Top" Width="96"/>
+    <CheckBox x:Name="chkAutoConnect" Content="Auto connect after start" HorizontalAlignment="Left" Margin="273,68,0,0" VerticalAlignment="Top" IsEnabled="False" Width="350" Height="22"/>
+    <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="20" Margin="95,69,0,0" VerticalAlignment="Top" Width="166" AllowDrop="True" MaxLines="1" ToolTip="" GotFocus="tbUsername_GotFocus" LostFocus="tbUsername_LostFocus" MaxLength="50" KeyDown="tbUsername_KeyDown"/>
+    <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="95,99,0,0" VerticalAlignment="Top" Width="166" GotFocus="pbPassword_GotFocus" LostFocus="pbPassword_LostFocus" MaxLength="50" KeyDown="pbPassword_KeyDown"/>
+    <Ellipse x:Name="StatusLiveMultimediaSystem" HorizontalAlignment="Left" Height="15" Margin="628,102,0,0" VerticalAlignment="Top" Width="15" Fill="Gray" MouseLeftButtonUp="StatusLiveMultimediaSystem_MouseLeftButtonUp"/>
+    <CheckBox x:Name="chkUseProxy" Content="Use Proxy" HorizontalAlignment="Left" Margin="273,99,0,0" VerticalAlignment="Top" Height="20" Width="107" Checked="chkUseProxy_Checked" Unchecked="chkUseProxy_Unchecked"/>
+    <TextBox x:Name="tbProxyAddress" HorizontalAlignment="Left" Height="20" Margin="385,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+    <Label x:Name="lblProxyPort" Content="Port" HorizontalAlignment="Left" Margin="538,93,0,0" VerticalAlignment="Top"/>
+    <TextBox x:Name="tbProxyPort" HorizontalAlignment="Left" Height="20" Margin="575,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Text="80" MaxLength="5"/>
+    <ToolBarPanel HorizontalAlignment="Left" Height="60" Margin="0" VerticalAlignment="Top">
+      <ToolBar x:Name="toolbarCommand" HorizontalAlignment="Left" Height="55" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="625">
+        <Button x:Name="cmdAddMultimediaFile" Content="Add File" Height="50" VerticalAlignment="Top" Click="cmdAddMultimediaFile_Click" Width="95"/>
+        <Separator x:Name="Separator1" Height="50" Margin="0" VerticalAlignment="Top" Width="5"/>
+        <Button x:Name="cmdAddMultimediaFolder" Content="Add Folder" Width="95" Height="50" VerticalAlignment="Top" Click="cmdAddMultimediaFolder_Click"/>
+        <ComboBox x:Name="comboAddMultimediaFolder" Width="95" Height="50" VerticalAlignment="Top" LostFocus="comboAddMultimediaFolder_LostFocus"/>
+        <Separator x:Name="Separator2" Height="50" Margin="0" VerticalAlignment="Top" Width="5"/>
+        <Button x:Name="cmdConnectDisconnect" Content="Start" Height="50" VerticalAlignment="Top" Click="cmdConnectDisconnect_Click" Width="95"/>
+        <Separator x:Name="Separator3" Height="50" Margin="0" VerticalAlignment="Top" Width="5"/>
+        <Button x:Name="cmdSelectLanguage" Content="Select Language" Width="95" Height="50" Click="cmdSelectLanguage_Click"/>
+        <Separator x:Name="Separator4" Width="5"/>
+        <Button x:Name="cmdAbout" Content="About" Height="50" VerticalAlignment="Top" Width="95" Click="cmdAbout_Click"/>
+        <Separator x:Name="Separator5" Height="50" Margin="0" VerticalAlignment="Top" Width="5"/>
+        <Button x:Name="cmdExit" Content="Exit" Height="50" VerticalAlignment="Top" Width="95" Click="cmdExit_Click"/>
+      </ToolBar>
+    </ToolBarPanel>
+    <Label x:Name="lblRequestError" Content="Error Request" HorizontalAlignment="Left" Margin="525,60,0,0" Width="153" HorizontalContentAlignment="Right" VerticalAlignment="Top" Height="34"/>
+    <TextBlock x:Name="tbDebug" HorizontalAlignment="Left" Margin="628,0,-169,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="229"><Run Text="Debug"/></TextBlock>
+    <ProgressBar x:Name="pbMultimedia" Padding="10,0" IsTabStop="False" Orientation="Vertical" HorizontalContentAlignment="Center" Margin="658,131,0,38" HorizontalAlignment="Left" Width="20"/>
+    <Canvas Margin="6,0,17,0" Height="38" VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+      <StatusBar x:Name="sbBottom" Height="37" Width="649">
+        <Label x:Name="lblStatus1FilesInList" Content="Number of files in the list" Width="180" SnapsToDevicePixels="True" FontSize="14"/>
+        <Separator x:Name="Sep1" Margin="0" Width="1"/>
+        <Label x:Name="lblStatus1FilesInListResult" Content="{Binding ElementName=lbMultimedia, Path=Items.Count}"  Width="92" FontWeight="Bold" FontSize="14"/>
+        <Separator x:Name="Sep2" Margin="0,2" Width="1"/>
+        <Label x:Name="lblStatus2SearchFiles" Content="Search of files" FontSize="14"/>
+        <Separator x:Name="Sep3" Height="37" Margin="0" VerticalAlignment="Top" Width="1"/>
+        <Label x:Name="lblStatus2SearchFilesResult" Content="1234567890" FontSize="14" FontWeight="Bold"/>
+      </StatusBar>
+    </Canvas>
+  </Grid>
+</Window>

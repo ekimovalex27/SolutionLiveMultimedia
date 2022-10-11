@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="067e452a-0616-4553-ba2a-1e67258a1ae5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://service.storageint.com/StorageInterfaces.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StorageInterfaces.xsd" MetadataType="Schema" ID="be71695d-522a-448c-b23d-6c400a55633e" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd3" />
+    <MetadataFile FileName="StorageInterfaces1.xsd" MetadataType="Schema" ID="7063b6bf-cf7e-469b-b7cc-c8bd6e3d07ec" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd1" />
+    <MetadataFile FileName="StorageInterfaces4.xsd" MetadataType="Schema" ID="c110fc8a-9ffd-4ef0-ab34-c094f020c7d9" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd4" />
+    <MetadataFile FileName="StorageInterfaces.disco" MetadataType="Disco" ID="75d4a804-c8a4-4255-bd68-c34cabab2a0e" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?disco" />
+    <MetadataFile FileName="StorageInterfaces2.xsd" MetadataType="Schema" ID="c91dbf20-71ff-43b2-a9dd-de4026e29cce" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd2" />
+    <MetadataFile FileName="StorageInterfaces3.xsd" MetadataType="Schema" ID="ccdab068-8e96-40b3-a6dd-fae32e5de81a" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd0" />
+    <MetadataFile FileName="StorageInterfaces.wsdl" MetadataType="Wsdl" ID="8dce2303-1b4e-40b1-9997-6589a5cfea3f" SourceId="1" SourceUrl="http://service.storageint.com/StorageInterfaces.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

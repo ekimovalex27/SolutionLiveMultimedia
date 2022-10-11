@@ -1,0 +1,36 @@
+01. Профайл пользователя. Выводимая информация. Разрыв соединения.
+06. Широкое тестирование по знакомству
+08. Логотип Live Multimedia System в Live Connect
+09. Логотип Live Multimedia System в Facebook
+10. Логотип Live Multimedia System в Twitter
+11. Логотип Live Multimedia System в VKontakte
+14. Завести учётки в VKontakte
+15. Завести учётки в Google
+16. Завести учётки в Yandex. Диск
+18. Показывать в песнях playlist где-то название альбома.
+22. Terme of use
+23. Apple iCloud
+24. Dropbox REST API: https://www.dropbox.com/developers/reference/api
+25. Яндекс.Диск
+26. Captcha
+30. SSL
+31. Передача кода приложения и пароля клиенту по SSL на сайт.
+32. Не играет в Chrome одинаковые песни.
+33. При изменении в списке песен в Home Albums не делать массовую замену, иначе перестают работать Playlists
+
+Под вопросом:
+1. Перевести Live Multimedia Application на .NET 4.0
+
+01. + Работа нескольких пользователей под одним логином (проверить send в Application).
+02. + При логине в хранилища использовать offline_access.
+03. + Playlist 07.04.2013.
+04. + Прокси.
+05. + Завести учётки в Facebook.
+06. + Завести учётки в Twitter.
+07. + Сменить пароль demo.
+08. + Поле Expires.
+09. + VKontakte.
+10. + Google Drive.
+11. + Показывать в песнях playlist источник.
+07. + Логотип Live Multimedia System
+28. + Выставить Live Multimedia Application в Windows Store как classic.

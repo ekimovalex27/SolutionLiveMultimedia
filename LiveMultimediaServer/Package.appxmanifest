@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="JetSoftwareAndService.LiveMultimedia" Publisher="CN=Jet Software And Service Ltd., O=Jet Software And Service Ltd., L=Saint-Petersburg, S=Saint-Petersburg, C=RU" Version="1.1.1.0" />
+  <mp:PhoneIdentity PhoneProductId="397c98ae-3ef7-4d2a-b8e1-c31eebb32353" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Live Multimedia</DisplayName>
+    <PublisherDisplayName>Jet Software And Service</PublisherDisplayName>
+    <Logo>Assets\LiveMultimediaMarketStore50.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="LiveMultimediaServer.App">
+      <uap:VisualElements DisplayName="Live Multimedia Server" Square150x150Logo="Assets\LiveMultimediaMarket150.png" Square44x44Logo="Assets\LiveMultimediaMarket44.png" Description="Live Multimedia Server of Live Multimedia Market" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\LiveMultimediaMarket310x150.png" ShortName="Live Multimedia Server" Square71x71Logo="Assets\LiveMultimediaMarket71.png" Square310x310Logo="Assets\LiveMultimediaMarket310x310.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\LMM_SplashScreen200.png" BackgroundColor="transparent" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap:Capability Name="musicLibrary" />
+    <uap:Capability Name="picturesLibrary" />
+    <uap:Capability Name="videosLibrary" />
+    <uap:Capability Name="removableStorage" />
+  </Capabilities>
+</Package>

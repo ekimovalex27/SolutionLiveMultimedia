@@ -1,0 +1,21 @@
+          <Pivot.HeaderTemplate>
+            <DataTemplate>
+              <Grid>
+                <TextBlock Text="{Binding}" Foreground="White" />
+                <!--FontSize="24" FontFamily="Segoe UI"-->
+              </Grid>
+            </DataTemplate>
+          </Pivot.HeaderTemplate>
+
+                  <ListBox.ItemTemplate>
+                    <DataTemplate>
+                      <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="qq" Width="150" VerticalAlignment="Center"/>
+                        <TextBox Width="80" />
+                        <Button Content="Измерить" Width="80"/>
+                        <TextBlock Text="-" Width="80" VerticalAlignment="Center" TextAlignment="Center" />
+                        <Button Content="Записать"  Width="80"/>
+                      </StackPanel>
+                    </DataTemplate>
+                  </ListBox.ItemTemplate>
+          

@@ -1,0 +1,1796 @@
+<system.webServer>
+  <security>
+    <authorization>
+      <add accessType="Allow" users="*" />
+    </authorization>
+  </security>
+</system.webServer>
+<system.web>
+  <urlMappings enabled="true">
+  </urlMappings>
+</system.web>
+<system.webServer>
+  <caching enabled="true" enableKernelCache="true">
+    <profiles>
+    </profiles>
+  </caching>
+</system.webServer>
+<system.webServer>
+  <defaultDocument enabled="true">
+    <files>
+      <add value="Default.htm" />
+      <add value="Default.asp" />
+      <add value="index.htm" />
+      <add value="index.html" />
+      <add value="iisstart.htm" />
+      <add value="default.aspx" />
+    </files>
+  </defaultDocument>
+</system.webServer>
+<system.windows.forms />
+<system.applicationHost>
+  <configHistory />
+</system.applicationHost>
+<system.applicationHost>
+  <webLimits />
+</system.applicationHost>
+<system.webServer>
+  <directoryBrowse enabled="false" />
+</system.webServer>
+<system.webServer>
+  <httpRedirect enabled="false">
+  </httpRedirect>
+</system.webServer>
+<system.webServer>
+  <isapiFilters>
+    <filter name="ASP.Net_2.0.50727.0" path="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_filter.dll" enableCache="true" preCondition="bitness32,runtimeVersionv2.0" />
+    <filter name="ASP.Net_2.0_for_v1.1" path="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_filter.dll" enableCache="true" preCondition="runtimeVersionv1.1" />
+    <filter name="ASP.Net_4.0_32bit" path="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_filter.dll" enableCache="true" preCondition="bitness32,runtimeVersionv4.0" />
+  </isapiFilters>
+</system.webServer>
+<system.webServer>
+  <validation />
+</system.webServer>
+<system.codedom>
+  <compilers>
+    <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CSharp.CSharpCodeProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+      <providerOption name="CompilerVersion" value="v4.0" />
+      <providerOption name="WarnAsError" value="false" />
+    </compiler>
+    <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.VisualBasic.VBCodeProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+      <providerOption name="CompilerVersion" value="v4.0" />
+      <providerOption name="OptionInfer" value="true" />
+      <providerOption name="WarnAsError" value="false" />
+    </compiler>
+  </compilers>
+</system.codedom>
+<system.applicationHost>
+  <applicationPools>
+    <applicationPoolDefaults managedRuntimeLoader="v4.0">
+      <processModel />
+      <recycling>
+        <periodicRestart>
+          <schedule>
+          </schedule>
+        </periodicRestart>
+      </recycling>
+      <failure />
+      <cpu />
+    </applicationPoolDefaults>
+    <add name="Clr4IntegratedAppPool" autoStart="true" managedRuntimeVersion="v4.0" managedPipelineMode="Integrated" CLRConfigFile="%IIS_USER_HOME%\config\aspnet.config">
+      <processModel />
+      <recycling>
+        <periodicRestart>
+          <schedule>
+          </schedule>
+        </periodicRestart>
+      </recycling>
+      <failure />
+      <cpu />
+    </add>
+    <add name="Clr4ClassicAppPool" autoStart="true" managedRuntimeVersion="v4.0" managedPipelineMode="Classic" CLRConfigFile="%IIS_USER_HOME%\config\aspnet.config">
+      <processModel />
+      <recycling>
+        <periodicRestart>
+          <schedule>
+          </schedule>
+        </periodicRestart>
+      </recycling>
+      <failure />
+      <cpu />
+    </add>
+    <add name="Clr2IntegratedAppPool" autoStart="true" managedRuntimeVersion="v2.0" managedPipelineMode="Integrated" CLRConfigFile="%IIS_USER_HOME%\config\aspnet.config">
+      <processModel />
+      <recycling>
+        <periodicRestart>
+          <schedule>
+          </schedule>
+        </periodicRestart>
+      </recycling>
+      <failure />
+      <cpu />
+    </add>
+    <add name="Clr2ClassicAppPool" autoStart="true" managedRuntimeVersion="v2.0" managedPipelineMode="Classic" CLRConfigFile="%IIS_USER_HOME%\config\aspnet.config">
+      <processModel />
+      <recycling>
+        <periodicRestart>
+          <schedule>
+          </schedule>
+        </periodicRestart>
+      </recycling>
+      <failure />
+      <cpu />
+    </add>
+    <add name="UnmanagedClassicAppPool" autoStart="true" managedRuntimeVersion="" managedPipelineMode="Classic">
+      <processModel />
+      <recycling>
+        <periodicRestart>
+          <schedule>
+          </schedule>
+        </periodicRestart>
+      </recycling>
+      <failure />
+      <cpu />
+    </add>
+  </applicationPools>
+</system.applicationHost>
+<system.webServer>
+  <cgi />
+</system.webServer>
+<system.webServer>
+  <httpErrors>
+    <error statusCode="401" prefixLanguageFilePath="%IIS_BIN%\custerr" path="401.htm" />
+    <error statusCode="403" prefixLanguageFilePath="%IIS_BIN%\custerr" path="403.htm" />
+    <error statusCode="404" prefixLanguageFilePath="%IIS_BIN%\custerr" path="404.htm" />
+    <error statusCode="405" prefixLanguageFilePath="%IIS_BIN%\custerr" path="405.htm" />
+    <error statusCode="406" prefixLanguageFilePath="%IIS_BIN%\custerr" path="406.htm" />
+    <error statusCode="412" prefixLanguageFilePath="%IIS_BIN%\custerr" path="412.htm" />
+    <error statusCode="500" prefixLanguageFilePath="%IIS_BIN%\custerr" path="500.htm" />
+    <error statusCode="501" prefixLanguageFilePath="%IIS_BIN%\custerr" path="501.htm" />
+    <error statusCode="502" prefixLanguageFilePath="%IIS_BIN%\custerr" path="502.htm" />
+  </httpErrors>
+</system.webServer>
+<system.webServer>
+  <odbcLogging />
+</system.webServer>
+<system.webServer>
+  <security>
+    <access sslFlags="None" />
+  </security>
+</system.webServer>
+<system.web>
+  <compilation>
+    <assemblies>
+      <add assembly="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="mscorlib" />
+      <add assembly="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <add assembly="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <add assembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <add assembly="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <add assembly="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <add assembly="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <add assembly="System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.WorkflowServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <add assembly="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add assembly="*" />
+      <add assembly="Microsoft.VisualStudio.Web.PageInspector.Loader, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </assemblies>
+    <buildProviders>
+      <add extension=".aspx" type="System.Web.Compilation.PageBuildProvider" />
+      <add extension=".ascx" type="System.Web.Compilation.UserControlBuildProvider" />
+      <add extension=".master" type="System.Web.Compilation.MasterPageBuildProvider" />
+      <add extension=".asmx" type="System.Web.Compilation.WebServiceBuildProvider" />
+      <add extension=".ashx" type="System.Web.Compilation.WebHandlerBuildProvider" />
+      <add extension=".soap" type="System.Web.Compilation.WebServiceBuildProvider" />
+      <add extension=".resx" type="System.Web.Compilation.ResXBuildProvider" />
+      <add extension=".resources" type="System.Web.Compilation.ResourcesBuildProvider" />
+      <add extension=".wsdl" type="System.Web.Compilation.WsdlBuildProvider" />
+      <add extension=".xsd" type="System.Web.Compilation.XsdBuildProvider" />
+      <add extension=".js" type="System.Web.Compilation.ForceCopyBuildProvider" />
+      <add extension=".lic" type="System.Web.Compilation.IgnoreFileBuildProvider" />
+      <add extension=".licx" type="System.Web.Compilation.IgnoreFileBuildProvider" />
+      <add extension=".exclude" type="System.Web.Compilation.IgnoreFileBuildProvider" />
+      <add extension=".refresh" type="System.Web.Compilation.IgnoreFileBuildProvider" />
+      <add extension=".edmx" type="System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider" />
+      <add extension=".xoml" type="System.ServiceModel.Activation.WorkflowServiceBuildProvider, System.WorkflowServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add extension=".svc" type="System.ServiceModel.Activation.ServiceBuildProvider, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add extension=".xamlx" type="System.Xaml.Hosting.XamlBuildProvider, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    </buildProviders>
+    <codeSubDirectories>
+    </codeSubDirectories>
+    <expressionBuilders>
+      <add expressionPrefix="Resources" type="System.Web.Compilation.ResourceExpressionBuilder" />
+      <add expressionPrefix="ConnectionStrings" type="System.Web.Compilation.ConnectionStringsExpressionBuilder" />
+      <add expressionPrefix="AppSettings" type="System.Web.Compilation.AppSettingsExpressionBuilder" />
+      <add expressionPrefix="RouteUrl" type="System.Web.Compilation.RouteUrlExpressionBuilder" />
+      <add expressionPrefix="RouteValue" type="System.Web.Compilation.RouteValueExpressionBuilder" />
+    </expressionBuilders>
+    <folderLevelBuildProviders>
+      <add name="DataServiceBuildProvider" type="System.Data.Services.BuildProvider.DataServiceBuildProvider, System.Data.Services.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    </folderLevelBuildProviders>
+  </compilation>
+</system.web>
+<system.web>
+  <sessionState>
+    <providers>
+    </providers>
+  </sessionState>
+</system.web>
+<system.web>
+  <xhtmlConformance />
+</system.web>
+<system.net>
+  <connectionManagement>
+  </connectionManagement>
+</system.net>
+<system.webServer>
+  <rewrite>
+    <outboundRules>
+      <customTags>
+      </customTags>
+      <preConditions>
+      </preConditions>
+    </outboundRules>
+  </rewrite>
+</system.webServer>
+<system.webServer>
+  <webdav>
+    <authoringRules>
+    </authoringRules>
+  </webdav>
+</system.webServer>
+<system.webServer>
+  <httpTracing>
+    <traceUrls>
+    </traceUrls>
+  </httpTracing>
+</system.webServer>
+<system.webServer>
+  <security>
+    <authentication>
+      <basicAuthentication enabled="false" />
+    </authentication>
+  </security>
+</system.webServer>
+<system.web>
+  <authentication>
+    <forms>
+      <credentials>
+      </credentials>
+    </forms>
+    <passport />
+  </authentication>
+</system.web>
+<system.web>
+  <httpCookies />
+</system.web>
+<system.web>
+  <caching>
+    <sqlCacheDependency>
+      <databases>
+      </databases>
+    </sqlCacheDependency>
+  </caching>
+</system.web>
+<system.web>
+  <partialTrustVisibleAssemblies>
+  </partialTrustVisibleAssemblies>
+</system.web>
+<system.webServer>
+  <tracing>
+    <traceFailedRequests>
+      <add path="*">
+        <traceAreas>
+          <add provider="ASP" verbosity="Verbose" />
+          <add provider="ASPNET" areas="Infrastructure,Module,Page,AppServices" verbosity="Verbose" />
+          <add provider="ISAPI Extension" verbosity="Verbose" />
+          <add provider="WWW Server" areas="Authentication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotifications,Module,Rewrite" verbosity="Verbose" />
+        </traceAreas>
+        <failureDefinitions statusCodes="200-999" />
+      </add>
+    </traceFailedRequests>
+  </tracing>
+</system.webServer>
+<system.web>
+  <clientTarget>
+    <add alias="uplevel" userAgent="Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1)" />
+    <add alias="downlevel" userAgent="Generic Downlevel" />
+  </clientTarget>
+</system.web>
+<system.web>
+  <webParts>
+    <personalization>
+      <authorization>
+        <deny users="*" verbs="enterSharedScope" />
+        <allow users="*" verbs="modifyState" />
+      </authorization>
+      <providers>
+        <add name="AspNetSqlPersonalizationProvider" type="System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" connectionStringName="LocalSqlServer" />
+      </providers>
+    </personalization>
+    <transformers>
+      <add name="RowToFieldTransformer" type="System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />
+      <add name="RowToParametersTransformer" type="System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />
+    </transformers>
+  </webParts>
+</system.web>
+<system.web>
+  <fullTrustAssemblies>
+    <add assemblyName="Microsoft.VisualStudio.Enterprise.AspNetHelper" version="10.0.0.0" publicKey="002400000480000094000000060200000024000052534131000400000100010007D1FA57C4AED9F0A32E84AA0FAEFD0DE9E8FD6AEC8F87FB03766C834C99921EB23BE79AD9D5DCC1DD9AD236132102900B723CF980957FC4E177108FC607774F29E8320E92EA05ECE4E821C0A5EFE8F1645C4C0C93C1AB99285D622CAA652C1DFAD63D745D6F2DE5F17E5EAF0FC4963D261C8A12436518206DC093344D5AD293" />
+    <add assemblyName="Microsoft.VisualStudio.Web" version="10.0.0.0" publicKey="002400000480000094000000060200000024000052534131000400000100010007D1FA57C4AED9F0A32E84AA0FAEFD0DE9E8FD6AEC8F87FB03766C834C99921EB23BE79AD9D5DCC1DD9AD236132102900B723CF980957FC4E177108FC607774F29E8320E92EA05ECE4E821C0A5EFE8F1645C4C0C93C1AB99285D622CAA652C1DFAD63D745D6F2DE5F17E5EAF0FC4963D261C8A12436518206DC093344D5AD293" />
+    <add assemblyName="Microsoft.Web.Infrastructure" version="1.0.0.0" publicKey="0024000004800000940000000602000000240000525341310004000001000100B5FC90E7027F67871E773A8FDE8938C81DD402BA65B9201D60593E96C492651E889CC13F1415EBB53FAC1131AE0BD333C5EE6021672D9718EA31A8AEBD0DA0072F25D87DBA6FC90FFD598ED4DA35E44C398C454307E8E33B8426143DAEC9F596836F97C8F74750E5975C64E2189F45DEF46B2A2B1247ADC3652BF5C308055DA9" />
+    <add assemblyName="System.Data.SqlServerCe" version="4.0.0.0" publicKey="0024000004800000940000000602000000240000525341310004000001000100272736ad6e5f9586bac2d531eabc3acc666c2f8ec879fa94f8f7b0327d2ff2ed523448f83c3d5c5dd2dfc7bc99c5286b2c125117bf5cbe242b9d41750732b2bdffe649c6efb8e5526d526fdd130095ecdb7bf210809c6cdad8824faa9ac0310ac3cba2aa0523567b2dfa7fe250b30facbd62d4ec99b94ac47c7d3b28f1f6e4c8" />
+  </fullTrustAssemblies>
+</system.web>
+<system.xml.serialization>
+  <dateTimeSerialization />
+</system.xml.serialization>
+<system.webServer>
+  <httpLogging dontLog="false" />
+</system.webServer>
+<system.webServer>
+  <staticContent>
+    <clientCache />
+    <mimeMap fileExtension=".323" mimeType="text/h323" />
+    <mimeMap fileExtension=".aaf" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".aca" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".accdb" mimeType="application/msaccess" />
+    <mimeMap fileExtension=".accde" mimeType="application/msaccess" />
+    <mimeMap fileExtension=".accdt" mimeType="application/msaccess" />
+    <mimeMap fileExtension=".acx" mimeType="application/internet-property-stream" />
+    <mimeMap fileExtension=".afm" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".ai" mimeType="application/postscript" />
+    <mimeMap fileExtension=".aif" mimeType="audio/x-aiff" />
+    <mimeMap fileExtension=".aifc" mimeType="audio/aiff" />
+    <mimeMap fileExtension=".aiff" mimeType="audio/aiff" />
+    <mimeMap fileExtension=".application" mimeType="application/x-ms-application" />
+    <mimeMap fileExtension=".art" mimeType="image/x-jg" />
+    <mimeMap fileExtension=".asd" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".asf" mimeType="video/x-ms-asf" />
+    <mimeMap fileExtension=".asi" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".asm" mimeType="text/plain" />
+    <mimeMap fileExtension=".asr" mimeType="video/x-ms-asf" />
+    <mimeMap fileExtension=".asx" mimeType="video/x-ms-asf" />
+    <mimeMap fileExtension=".atom" mimeType="application/atom+xml" />
+    <mimeMap fileExtension=".au" mimeType="audio/basic" />
+    <mimeMap fileExtension=".avi" mimeType="video/x-msvideo" />
+    <mimeMap fileExtension=".axs" mimeType="application/olescript" />
+    <mimeMap fileExtension=".bas" mimeType="text/plain" />
+    <mimeMap fileExtension=".bcpio" mimeType="application/x-bcpio" />
+    <mimeMap fileExtension=".bin" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".bmp" mimeType="image/bmp" />
+    <mimeMap fileExtension=".c" mimeType="text/plain" />
+    <mimeMap fileExtension=".cab" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".calx" mimeType="application/vnd.ms-office.calx" />
+    <mimeMap fileExtension=".cat" mimeType="application/vnd.ms-pki.seccat" />
+    <mimeMap fileExtension=".cdf" mimeType="application/x-cdf" />
+    <mimeMap fileExtension=".chm" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".class" mimeType="application/x-java-applet" />
+    <mimeMap fileExtension=".clp" mimeType="application/x-msclip" />
+    <mimeMap fileExtension=".cmx" mimeType="image/x-cmx" />
+    <mimeMap fileExtension=".cnf" mimeType="text/plain" />
+    <mimeMap fileExtension=".cod" mimeType="image/cis-cod" />
+    <mimeMap fileExtension=".cpio" mimeType="application/x-cpio" />
+    <mimeMap fileExtension=".cpp" mimeType="text/plain" />
+    <mimeMap fileExtension=".crd" mimeType="application/x-mscardfile" />
+    <mimeMap fileExtension=".crl" mimeType="application/pkix-crl" />
+    <mimeMap fileExtension=".crt" mimeType="application/x-x509-ca-cert" />
+    <mimeMap fileExtension=".csh" mimeType="application/x-csh" />
+    <mimeMap fileExtension=".css" mimeType="text/css" />
+    <mimeMap fileExtension=".csv" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".cur" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".dcr" mimeType="application/x-director" />
+    <mimeMap fileExtension=".deploy" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".der" mimeType="application/x-x509-ca-cert" />
+    <mimeMap fileExtension=".dib" mimeType="image/bmp" />
+    <mimeMap fileExtension=".dir" mimeType="application/x-director" />
+    <mimeMap fileExtension=".disco" mimeType="text/xml" />
+    <mimeMap fileExtension=".dll" mimeType="application/x-msdownload" />
+    <mimeMap fileExtension=".dll.config" mimeType="text/xml" />
+    <mimeMap fileExtension=".dlm" mimeType="text/dlm" />
+    <mimeMap fileExtension=".doc" mimeType="application/msword" />
+    <mimeMap fileExtension=".docm" mimeType="application/vnd.ms-word.document.macroEnabled.12" />
+    <mimeMap fileExtension=".docx" mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+    <mimeMap fileExtension=".dot" mimeType="application/msword" />
+    <mimeMap fileExtension=".dotm" mimeType="application/vnd.ms-word.template.macroEnabled.12" />
+    <mimeMap fileExtension=".dotx" mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.template" />
+    <mimeMap fileExtension=".dsp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".dtd" mimeType="text/xml" />
+    <mimeMap fileExtension=".dvi" mimeType="application/x-dvi" />
+    <mimeMap fileExtension=".dwf" mimeType="drawing/x-dwf" />
+    <mimeMap fileExtension=".dwp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".dxr" mimeType="application/x-director" />
+    <mimeMap fileExtension=".eml" mimeType="message/rfc822" />
+    <mimeMap fileExtension=".emz" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".eot" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".eps" mimeType="application/postscript" />
+    <mimeMap fileExtension=".etx" mimeType="text/x-setext" />
+    <mimeMap fileExtension=".evy" mimeType="application/envoy" />
+    <mimeMap fileExtension=".exe" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".exe.config" mimeType="text/xml" />
+    <mimeMap fileExtension=".fdf" mimeType="application/vnd.fdf" />
+    <mimeMap fileExtension=".fif" mimeType="application/fractals" />
+    <mimeMap fileExtension=".fla" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".flr" mimeType="x-world/x-vrml" />
+    <mimeMap fileExtension=".flv" mimeType="video/x-flv" />
+    <mimeMap fileExtension=".gif" mimeType="image/gif" />
+    <mimeMap fileExtension=".gtar" mimeType="application/x-gtar" />
+    <mimeMap fileExtension=".gz" mimeType="application/x-gzip" />
+    <mimeMap fileExtension=".h" mimeType="text/plain" />
+    <mimeMap fileExtension=".hdf" mimeType="application/x-hdf" />
+    <mimeMap fileExtension=".hdml" mimeType="text/x-hdml" />
+    <mimeMap fileExtension=".hhc" mimeType="application/x-oleobject" />
+    <mimeMap fileExtension=".hhk" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".hhp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".hlp" mimeType="application/winhlp" />
+    <mimeMap fileExtension=".hqx" mimeType="application/mac-binhex40" />
+    <mimeMap fileExtension=".hta" mimeType="application/hta" />
+    <mimeMap fileExtension=".htc" mimeType="text/x-component" />
+    <mimeMap fileExtension=".htm" mimeType="text/html" />
+    <mimeMap fileExtension=".html" mimeType="text/html" />
+    <mimeMap fileExtension=".htt" mimeType="text/webviewhtml" />
+    <mimeMap fileExtension=".hxt" mimeType="text/html" />
+    <mimeMap fileExtension=".ical" mimeType="text/calendar" />
+    <mimeMap fileExtension=".icalendar" mimeType="text/calendar" />
+    <mimeMap fileExtension=".ico" mimeType="image/x-icon" />
+    <mimeMap fileExtension=".ics" mimeType="text/calendar" />
+    <mimeMap fileExtension=".ief" mimeType="image/ief" />
+    <mimeMap fileExtension=".ifb" mimeType="text/calendar" />
+    <mimeMap fileExtension=".iii" mimeType="application/x-iphone" />
+    <mimeMap fileExtension=".inf" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".ins" mimeType="application/x-internet-signup" />
+    <mimeMap fileExtension=".isp" mimeType="application/x-internet-signup" />
+    <mimeMap fileExtension=".IVF" mimeType="video/x-ivf" />
+    <mimeMap fileExtension=".jar" mimeType="application/java-archive" />
+    <mimeMap fileExtension=".java" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".jck" mimeType="application/liquidmotion" />
+    <mimeMap fileExtension=".jcz" mimeType="application/liquidmotion" />
+    <mimeMap fileExtension=".jfif" mimeType="image/pjpeg" />
+    <mimeMap fileExtension=".jpb" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".jpe" mimeType="image/jpeg" />
+    <mimeMap fileExtension=".jpeg" mimeType="image/jpeg" />
+    <mimeMap fileExtension=".jpg" mimeType="image/jpeg" />
+    <mimeMap fileExtension=".js" mimeType="application/x-javascript" />
+    <mimeMap fileExtension=".jsx" mimeType="text/jscript" />
+    <mimeMap fileExtension=".latex" mimeType="application/x-latex" />
+    <mimeMap fileExtension=".lit" mimeType="application/x-ms-reader" />
+    <mimeMap fileExtension=".lpk" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".lsf" mimeType="video/x-la-asf" />
+    <mimeMap fileExtension=".lsx" mimeType="video/x-la-asf" />
+    <mimeMap fileExtension=".lzh" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".m13" mimeType="application/x-msmediaview" />
+    <mimeMap fileExtension=".m14" mimeType="application/x-msmediaview" />
+    <mimeMap fileExtension=".m1v" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".m3u" mimeType="audio/x-mpegurl" />
+    <mimeMap fileExtension=".man" mimeType="application/x-troff-man" />
+    <mimeMap fileExtension=".manifest" mimeType="application/x-ms-manifest" />
+    <mimeMap fileExtension=".map" mimeType="text/plain" />
+    <mimeMap fileExtension=".mdb" mimeType="application/x-msaccess" />
+    <mimeMap fileExtension=".mdp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".me" mimeType="application/x-troff-me" />
+    <mimeMap fileExtension=".mht" mimeType="message/rfc822" />
+    <mimeMap fileExtension=".mhtml" mimeType="message/rfc822" />
+    <mimeMap fileExtension=".mid" mimeType="audio/mid" />
+    <mimeMap fileExtension=".midi" mimeType="audio/mid" />
+    <mimeMap fileExtension=".mix" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".mmf" mimeType="application/x-smaf" />
+    <mimeMap fileExtension=".mno" mimeType="text/xml" />
+    <mimeMap fileExtension=".mny" mimeType="application/x-msmoney" />
+    <mimeMap fileExtension=".mov" mimeType="video/quicktime" />
+    <mimeMap fileExtension=".movie" mimeType="video/x-sgi-movie" />
+    <mimeMap fileExtension=".mp2" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".mp3" mimeType="audio/mpeg" />
+    <mimeMap fileExtension=".mpa" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".mpe" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".mpeg" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".mpg" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".mpp" mimeType="application/vnd.ms-project" />
+    <mimeMap fileExtension=".mpv2" mimeType="video/mpeg" />
+    <mimeMap fileExtension=".ms" mimeType="application/x-troff-ms" />
+    <mimeMap fileExtension=".msi" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".mso" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".mvb" mimeType="application/x-msmediaview" />
+    <mimeMap fileExtension=".mvc" mimeType="application/x-miva-compiled" />
+    <mimeMap fileExtension=".nc" mimeType="application/x-netcdf" />
+    <mimeMap fileExtension=".nsc" mimeType="video/x-ms-asf" />
+    <mimeMap fileExtension=".nws" mimeType="message/rfc822" />
+    <mimeMap fileExtension=".ocx" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".oda" mimeType="application/oda" />
+    <mimeMap fileExtension=".odc" mimeType="text/x-ms-odc" />
+    <mimeMap fileExtension=".ods" mimeType="application/oleobject" />
+    <mimeMap fileExtension=".one" mimeType="application/onenote" />
+    <mimeMap fileExtension=".onea" mimeType="application/onenote" />
+    <mimeMap fileExtension=".onetoc" mimeType="application/onenote" />
+    <mimeMap fileExtension=".onetoc2" mimeType="application/onenote" />
+    <mimeMap fileExtension=".onetmp" mimeType="application/onenote" />
+    <mimeMap fileExtension=".onepkg" mimeType="application/onenote" />
+    <mimeMap fileExtension=".osdx" mimeType="application/opensearchdescription+xml" />
+    <mimeMap fileExtension=".p10" mimeType="application/pkcs10" />
+    <mimeMap fileExtension=".p12" mimeType="application/x-pkcs12" />
+    <mimeMap fileExtension=".p7b" mimeType="application/x-pkcs7-certificates" />
+    <mimeMap fileExtension=".p7c" mimeType="application/pkcs7-mime" />
+    <mimeMap fileExtension=".p7m" mimeType="application/pkcs7-mime" />
+    <mimeMap fileExtension=".p7r" mimeType="application/x-pkcs7-certreqresp" />
+    <mimeMap fileExtension=".p7s" mimeType="application/pkcs7-signature" />
+    <mimeMap fileExtension=".pbm" mimeType="image/x-portable-bitmap" />
+    <mimeMap fileExtension=".pcx" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".pcz" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".pdf" mimeType="application/pdf" />
+    <mimeMap fileExtension=".pfb" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".pfm" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".pfx" mimeType="application/x-pkcs12" />
+    <mimeMap fileExtension=".pgm" mimeType="image/x-portable-graymap" />
+    <mimeMap fileExtension=".pko" mimeType="application/vnd.ms-pki.pko" />
+    <mimeMap fileExtension=".pma" mimeType="application/x-perfmon" />
+    <mimeMap fileExtension=".pmc" mimeType="application/x-perfmon" />
+    <mimeMap fileExtension=".pml" mimeType="application/x-perfmon" />
+    <mimeMap fileExtension=".pmr" mimeType="application/x-perfmon" />
+    <mimeMap fileExtension=".pmw" mimeType="application/x-perfmon" />
+    <mimeMap fileExtension=".png" mimeType="image/png" />
+    <mimeMap fileExtension=".pnm" mimeType="image/x-portable-anymap" />
+    <mimeMap fileExtension=".pnz" mimeType="image/png" />
+    <mimeMap fileExtension=".pot" mimeType="application/vnd.ms-powerpoint" />
+    <mimeMap fileExtension=".potm" mimeType="application/vnd.ms-powerpoint.template.macroEnabled.12" />
+    <mimeMap fileExtension=".potx" mimeType="application/vnd.openxmlformats-officedocument.presentationml.template" />
+    <mimeMap fileExtension=".ppam" mimeType="application/vnd.ms-powerpoint.addin.macroEnabled.12" />
+    <mimeMap fileExtension=".ppm" mimeType="image/x-portable-pixmap" />
+    <mimeMap fileExtension=".pps" mimeType="application/vnd.ms-powerpoint" />
+    <mimeMap fileExtension=".ppsm" mimeType="application/vnd.ms-powerpoint.slideshow.macroEnabled.12" />
+    <mimeMap fileExtension=".ppsx" mimeType="application/vnd.openxmlformats-officedocument.presentationml.slideshow" />
+    <mimeMap fileExtension=".ppt" mimeType="application/vnd.ms-powerpoint" />
+    <mimeMap fileExtension=".pptm" mimeType="application/vnd.ms-powerpoint.presentation.macroEnabled.12" />
+    <mimeMap fileExtension=".pptx" mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+    <mimeMap fileExtension=".prf" mimeType="application/pics-rules" />
+    <mimeMap fileExtension=".prm" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".prx" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".ps" mimeType="application/postscript" />
+    <mimeMap fileExtension=".psd" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".psm" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".psp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".pub" mimeType="application/x-mspublisher" />
+    <mimeMap fileExtension=".qt" mimeType="video/quicktime" />
+    <mimeMap fileExtension=".qtl" mimeType="application/x-quicktimeplayer" />
+    <mimeMap fileExtension=".qxd" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".ra" mimeType="audio/x-pn-realaudio" />
+    <mimeMap fileExtension=".ram" mimeType="audio/x-pn-realaudio" />
+    <mimeMap fileExtension=".rar" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".ras" mimeType="image/x-cmu-raster" />
+    <mimeMap fileExtension=".rf" mimeType="image/vnd.rn-realflash" />
+    <mimeMap fileExtension=".rgb" mimeType="image/x-rgb" />
+    <mimeMap fileExtension=".rm" mimeType="application/vnd.rn-realmedia" />
+    <mimeMap fileExtension=".rmi" mimeType="audio/mid" />
+    <mimeMap fileExtension=".roff" mimeType="application/x-troff" />
+    <mimeMap fileExtension=".rpm" mimeType="audio/x-pn-realaudio-plugin" />
+    <mimeMap fileExtension=".rtf" mimeType="application/rtf" />
+    <mimeMap fileExtension=".rtx" mimeType="text/richtext" />
+    <mimeMap fileExtension=".scd" mimeType="application/x-msschedule" />
+    <mimeMap fileExtension=".sct" mimeType="text/scriptlet" />
+    <mimeMap fileExtension=".sea" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".setpay" mimeType="application/set-payment-initiation" />
+    <mimeMap fileExtension=".setreg" mimeType="application/set-registration-initiation" />
+    <mimeMap fileExtension=".sgml" mimeType="text/sgml" />
+    <mimeMap fileExtension=".sh" mimeType="application/x-sh" />
+    <mimeMap fileExtension=".shar" mimeType="application/x-shar" />
+    <mimeMap fileExtension=".sit" mimeType="application/x-stuffit" />
+    <mimeMap fileExtension=".sldm" mimeType="application/vnd.ms-powerpoint.slide.macroEnabled.12" />
+    <mimeMap fileExtension=".sldx" mimeType="application/vnd.openxmlformats-officedocument.presentationml.slide" />
+    <mimeMap fileExtension=".smd" mimeType="audio/x-smd" />
+    <mimeMap fileExtension=".smi" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".smx" mimeType="audio/x-smd" />
+    <mimeMap fileExtension=".smz" mimeType="audio/x-smd" />
+    <mimeMap fileExtension=".snd" mimeType="audio/basic" />
+    <mimeMap fileExtension=".snp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".spc" mimeType="application/x-pkcs7-certificates" />
+    <mimeMap fileExtension=".spl" mimeType="application/futuresplash" />
+    <mimeMap fileExtension=".src" mimeType="application/x-wais-source" />
+    <mimeMap fileExtension=".ssm" mimeType="application/streamingmedia" />
+    <mimeMap fileExtension=".sst" mimeType="application/vnd.ms-pki.certstore" />
+    <mimeMap fileExtension=".stl" mimeType="application/vnd.ms-pki.stl" />
+    <mimeMap fileExtension=".sv4cpio" mimeType="application/x-sv4cpio" />
+    <mimeMap fileExtension=".sv4crc" mimeType="application/x-sv4crc" />
+    <mimeMap fileExtension=".swf" mimeType="application/x-shockwave-flash" />
+    <mimeMap fileExtension=".t" mimeType="application/x-troff" />
+    <mimeMap fileExtension=".tar" mimeType="application/x-tar" />
+    <mimeMap fileExtension=".tcl" mimeType="application/x-tcl" />
+    <mimeMap fileExtension=".tex" mimeType="application/x-tex" />
+    <mimeMap fileExtension=".texi" mimeType="application/x-texinfo" />
+    <mimeMap fileExtension=".texinfo" mimeType="application/x-texinfo" />
+    <mimeMap fileExtension=".tgz" mimeType="application/x-compressed" />
+    <mimeMap fileExtension=".thmx" mimeType="application/vnd.ms-officetheme" />
+    <mimeMap fileExtension=".thn" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".tif" mimeType="image/tiff" />
+    <mimeMap fileExtension=".tiff" mimeType="image/tiff" />
+    <mimeMap fileExtension=".toc" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".tr" mimeType="application/x-troff" />
+    <mimeMap fileExtension=".trm" mimeType="application/x-msterminal" />
+    <mimeMap fileExtension=".tsv" mimeType="text/tab-separated-values" />
+    <mimeMap fileExtension=".ttf" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".txt" mimeType="text/plain" />
+    <mimeMap fileExtension=".u32" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".uls" mimeType="text/iuls" />
+    <mimeMap fileExtension=".ustar" mimeType="application/x-ustar" />
+    <mimeMap fileExtension=".vbs" mimeType="text/vbscript" />
+    <mimeMap fileExtension=".vcf" mimeType="text/x-vcard" />
+    <mimeMap fileExtension=".vcs" mimeType="text/plain" />
+    <mimeMap fileExtension=".vdx" mimeType="application/vnd.ms-visio.viewer" />
+    <mimeMap fileExtension=".vml" mimeType="text/xml" />
+    <mimeMap fileExtension=".vsd" mimeType="application/vnd.visio" />
+    <mimeMap fileExtension=".vss" mimeType="application/vnd.visio" />
+    <mimeMap fileExtension=".vst" mimeType="application/vnd.visio" />
+    <mimeMap fileExtension=".vsto" mimeType="application/x-ms-vsto" />
+    <mimeMap fileExtension=".vsw" mimeType="application/vnd.visio" />
+    <mimeMap fileExtension=".vsx" mimeType="application/vnd.visio" />
+    <mimeMap fileExtension=".vtx" mimeType="application/vnd.visio" />
+    <mimeMap fileExtension=".wav" mimeType="audio/wav" />
+    <mimeMap fileExtension=".wax" mimeType="audio/x-ms-wax" />
+    <mimeMap fileExtension=".wbmp" mimeType="image/vnd.wap.wbmp" />
+    <mimeMap fileExtension=".wcm" mimeType="application/vnd.ms-works" />
+    <mimeMap fileExtension=".wdb" mimeType="application/vnd.ms-works" />
+    <mimeMap fileExtension=".wks" mimeType="application/vnd.ms-works" />
+    <mimeMap fileExtension=".wm" mimeType="video/x-ms-wm" />
+    <mimeMap fileExtension=".wma" mimeType="audio/x-ms-wma" />
+    <mimeMap fileExtension=".wmd" mimeType="application/x-ms-wmd" />
+    <mimeMap fileExtension=".wmf" mimeType="application/x-msmetafile" />
+    <mimeMap fileExtension=".wml" mimeType="text/vnd.wap.wml" />
+    <mimeMap fileExtension=".wmlc" mimeType="application/vnd.wap.wmlc" />
+    <mimeMap fileExtension=".wmls" mimeType="text/vnd.wap.wmlscript" />
+    <mimeMap fileExtension=".wmlsc" mimeType="application/vnd.wap.wmlscriptc" />
+    <mimeMap fileExtension=".wmp" mimeType="video/x-ms-wmp" />
+    <mimeMap fileExtension=".wmv" mimeType="video/x-ms-wmv" />
+    <mimeMap fileExtension=".wmx" mimeType="video/x-ms-wmx" />
+    <mimeMap fileExtension=".wmz" mimeType="application/x-ms-wmz" />
+    <mimeMap fileExtension=".wps" mimeType="application/vnd.ms-works" />
+    <mimeMap fileExtension=".wri" mimeType="application/x-mswrite" />
+    <mimeMap fileExtension=".wrl" mimeType="x-world/x-vrml" />
+    <mimeMap fileExtension=".wrz" mimeType="x-world/x-vrml" />
+    <mimeMap fileExtension=".wsdl" mimeType="text/xml" />
+    <mimeMap fileExtension=".wvx" mimeType="video/x-ms-wvx" />
+    <mimeMap fileExtension=".x" mimeType="application/directx" />
+    <mimeMap fileExtension=".xaf" mimeType="x-world/x-vrml" />
+    <mimeMap fileExtension=".xaml" mimeType="application/xaml+xml" />
+    <mimeMap fileExtension=".xap" mimeType="application/x-silverlight-app" />
+    <mimeMap fileExtension=".xbap" mimeType="application/x-ms-xbap" />
+    <mimeMap fileExtension=".xbm" mimeType="image/x-xbitmap" />
+    <mimeMap fileExtension=".xdr" mimeType="text/plain" />
+    <mimeMap fileExtension=".xla" mimeType="application/vnd.ms-excel" />
+    <mimeMap fileExtension=".xlam" mimeType="application/vnd.ms-excel.addin.macroEnabled.12" />
+    <mimeMap fileExtension=".xlc" mimeType="application/vnd.ms-excel" />
+    <mimeMap fileExtension=".xlm" mimeType="application/vnd.ms-excel" />
+    <mimeMap fileExtension=".xls" mimeType="application/vnd.ms-excel" />
+    <mimeMap fileExtension=".xlsb" mimeType="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />
+    <mimeMap fileExtension=".xlsm" mimeType="application/vnd.ms-excel.sheet.macroEnabled.12" />
+    <mimeMap fileExtension=".xlsx" mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+    <mimeMap fileExtension=".xlt" mimeType="application/vnd.ms-excel" />
+    <mimeMap fileExtension=".xltm" mimeType="application/vnd.ms-excel.template.macroEnabled.12" />
+    <mimeMap fileExtension=".xltx" mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.template" />
+    <mimeMap fileExtension=".xlw" mimeType="application/vnd.ms-excel" />
+    <mimeMap fileExtension=".xml" mimeType="text/xml" />
+    <mimeMap fileExtension=".xof" mimeType="x-world/x-vrml" />
+    <mimeMap fileExtension=".xpm" mimeType="image/x-xpixmap" />
+    <mimeMap fileExtension=".xps" mimeType="application/vnd.ms-xpsdocument" />
+    <mimeMap fileExtension=".xsd" mimeType="text/xml" />
+    <mimeMap fileExtension=".xsf" mimeType="text/xml" />
+    <mimeMap fileExtension=".xsl" mimeType="text/xml" />
+    <mimeMap fileExtension=".xslt" mimeType="text/xml" />
+    <mimeMap fileExtension=".xsn" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".xtp" mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".xwd" mimeType="image/x-xwindowdump" />
+    <mimeMap fileExtension=".z" mimeType="application/x-compress" />
+    <mimeMap fileExtension=".zip" mimeType="application/x-zip-compressed" />
+  </staticContent>
+</system.webServer>
+<system.webServer>
+  <urlCompression />
+</system.webServer>
+<system.web>
+  <trace />
+</system.web>
+<system.net>
+  <defaultProxy>
+    <bypasslist>
+    </bypasslist>
+    <module />
+    <proxy usesystemdefault="true" />
+  </defaultProxy>
+</system.net>
+<system.webServer>
+  <rewrite>
+    <rules>
+    </rules>
+  </rewrite>
+</system.webServer>
+<system.webServer>
+  <rewrite>
+    <providers>
+    </providers>
+  </rewrite>
+</system.webServer>
+<system.webServer>
+  <webdav>
+    <globalSettings>
+      <propertyStores>
+        <add name="webdav_simple_prop" image="%IIS_BIN%\webdav_simple_prop.dll" image32="%windir%\syswow64\inetsrv\webdav_simple_prop.dll" />
+      </propertyStores>
+      <lockStores>
+        <add name="webdav_simple_lock" image="%IIS_BIN%\webdav_simple_lock.dll" image32="%windir%\syswow64\inetsrv\webdav_simple_lock.dll" />
+      </lockStores>
+    </globalSettings>
+  </webdav>
+</system.webServer>
+<system.webServer>
+  <security>
+    <authentication>
+      <anonymousAuthentication enabled="true" userName="" />
+    </authentication>
+  </security>
+</system.webServer>
+<system.webServer>
+  <serverSideInclude ssiExecDisable="false" />
+</system.webServer>
+<system.web>
+  <mobileControls cookielessDataDictionaryType="System.Web.Mobile.CookielessData" sessionStateHistorySize="6">
+    <device name="XhtmlDeviceAdapters" pageAdapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter" predicateClass="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter" predicateMethod="DeviceQualifies">
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPanelAdapter" name="System.Web.UI.MobileControls.Panel" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlFormAdapter" name="System.Web.UI.MobileControls.Form" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlTextBoxAdapter" name="System.Web.UI.MobileControls.TextBox" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter" name="System.Web.UI.MobileControls.Label" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLiteralTextAdapter" name="System.Web.UI.MobileControls.LiteralText" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLinkAdapter" name="System.Web.UI.MobileControls.Link" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlCommandAdapter" name="System.Web.UI.MobileControls.Command" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPhoneCallAdapter" name="System.Web.UI.MobileControls.PhoneCall" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlListAdapter" name="System.Web.UI.MobileControls.List" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlSelectionListAdapter" name="System.Web.UI.MobileControls.SelectionList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlObjectListAdapter" name="System.Web.UI.MobileControls.ObjectList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlImageAdapter" name="System.Web.UI.MobileControls.Image" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter" name="System.Web.UI.MobileControls.ValidationSummary" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlCalendarAdapter" name="System.Web.UI.MobileControls.Calendar" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlTextViewAdapter" name="System.Web.UI.MobileControls.TextView" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" name="System.Web.UI.MobileControls.MobileControl" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter" name="System.Web.UI.MobileControls.BaseValidator" />
+    </device>
+    <device name="HtmlDeviceAdapters" pageAdapter="System.Web.UI.MobileControls.Adapters.HtmlPageAdapter" predicateClass="System.Web.UI.MobileControls.Adapters.HtmlPageAdapter" predicateMethod="DeviceQualifies">
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlPanelAdapter" name="System.Web.UI.MobileControls.Panel" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlFormAdapter" name="System.Web.UI.MobileControls.Form" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlTextBoxAdapter" name="System.Web.UI.MobileControls.TextBox" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlLabelAdapter" name="System.Web.UI.MobileControls.Label" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlLiteralTextAdapter" name="System.Web.UI.MobileControls.LiteralText" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlLinkAdapter" name="System.Web.UI.MobileControls.Link" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlCommandAdapter" name="System.Web.UI.MobileControls.Command" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlPhoneCallAdapter" name="System.Web.UI.MobileControls.PhoneCall" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlListAdapter" name="System.Web.UI.MobileControls.List" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlSelectionListAdapter" name="System.Web.UI.MobileControls.SelectionList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlObjectListAdapter" name="System.Web.UI.MobileControls.ObjectList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlImageAdapter" name="System.Web.UI.MobileControls.Image" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlValidatorAdapter" name="System.Web.UI.MobileControls.BaseValidator" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlValidationSummaryAdapter" name="System.Web.UI.MobileControls.ValidationSummary" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlCalendarAdapter" name="System.Web.UI.MobileControls.Calendar" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlTextViewAdapter" name="System.Web.UI.MobileControls.TextView" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.HtmlControlAdapter" name="System.Web.UI.MobileControls.MobileControl" />
+    </device>
+    <device inheritsFrom="WmlDeviceAdapters" name="UpWmlDeviceAdapters" pageAdapter="System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter" predicateClass="System.Web.UI.MobileControls.Adapters.UpWmlPageAdapter" predicateMethod="DeviceQualifies">
+    </device>
+    <device name="WmlDeviceAdapters" pageAdapter="System.Web.UI.MobileControls.Adapters.WmlPageAdapter" predicateClass="System.Web.UI.MobileControls.Adapters.WmlPageAdapter" predicateMethod="DeviceQualifies">
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlPanelAdapter" name="System.Web.UI.MobileControls.Panel" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlFormAdapter" name="System.Web.UI.MobileControls.Form" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlTextBoxAdapter" name="System.Web.UI.MobileControls.TextBox" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlLabelAdapter" name="System.Web.UI.MobileControls.Label" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlLiteralTextAdapter" name="System.Web.UI.MobileControls.LiteralText" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlLinkAdapter" name="System.Web.UI.MobileControls.Link" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlCommandAdapter" name="System.Web.UI.MobileControls.Command" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlPhoneCallAdapter" name="System.Web.UI.MobileControls.PhoneCall" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlListAdapter" name="System.Web.UI.MobileControls.List" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlSelectionListAdapter" name="System.Web.UI.MobileControls.SelectionList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlObjectListAdapter" name="System.Web.UI.MobileControls.ObjectList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlImageAdapter" name="System.Web.UI.MobileControls.Image" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlValidatorAdapter" name="System.Web.UI.MobileControls.BaseValidator" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlValidationSummaryAdapter" name="System.Web.UI.MobileControls.ValidationSummary" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlCalendarAdapter" name="System.Web.UI.MobileControls.Calendar" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlTextViewAdapter" name="System.Web.UI.MobileControls.TextView" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.WmlControlAdapter" name="System.Web.UI.MobileControls.MobileControl" />
+    </device>
+    <device inheritsFrom="HtmlDeviceAdapters" name="ChtmlDeviceAdapters" pageAdapter="System.Web.UI.MobileControls.Adapters.ChtmlPageAdapter" predicateClass="System.Web.UI.MobileControls.Adapters.ChtmlPageAdapter" predicateMethod="DeviceQualifies">
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlFormAdapter" name="System.Web.UI.MobileControls.Form" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlCalendarAdapter" name="System.Web.UI.MobileControls.Calendar" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlImageAdapter" name="System.Web.UI.MobileControls.Image" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlTextBoxAdapter" name="System.Web.UI.MobileControls.TextBox" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlSelectionListAdapter" name="System.Web.UI.MobileControls.SelectionList" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlCommandAdapter" name="System.Web.UI.MobileControls.Command" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlPhoneCallAdapter" name="System.Web.UI.MobileControls.PhoneCall" />
+      <control adapter="System.Web.UI.MobileControls.Adapters.ChtmlLinkAdapter" name="System.Web.UI.MobileControls.Link" />
+    </device>
+  </mobileControls>
+</system.web>
+<system.web>
+  <sessionPageState />
+</system.web>
+<system.web>
+  <webControls clientScriptsLocation="/aspnet_client/{0}/{1}/" />
+</system.web>
+<system.web>
+  <hostingEnvironment />
+</system.web>
+<system.applicationHost>
+  <customMetadata>
+  </customMetadata>
+</system.applicationHost>
+<system.applicationHost>
+  <log>
+    <centralBinaryLogFile />
+    <centralW3CLogFile />
+  </log>
+</system.applicationHost>
+<system.webServer>
+  <serverRuntime />
+</system.webServer>
+<system.web>
+  <globalization />
+</system.web>
+<system.web>
+  <protocols>
+    <add appDomainHandlerType="System.ServiceModel.WasHosting.TcpAppDomainProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="net.tcp" processHandlerType="System.ServiceModel.WasHosting.TcpProcessProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" />
+    <add appDomainHandlerType="System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="net.pipe" processHandlerType="System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" />
+    <add appDomainHandlerType="System.ServiceModel.WasHosting.MsmqAppDomainProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="net.msmq" processHandlerType="System.ServiceModel.WasHosting.MsmqProcessProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" />
+    <add appDomainHandlerType="System.ServiceModel.WasHosting.MsmqIntegrationAppDomainProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="msmq.formatname" processHandlerType="System.ServiceModel.WasHosting.MsmqIntegrationProcessProtocolHandler, System.ServiceModel.WasHosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" />
+  </protocols>
+</system.web>
+<system.webServer>
+  <security>
+    <applicationDependencies>
+      <application name="Active Server Pages" groupId="ASP">
+      </application>
+    </applicationDependencies>
+  </security>
+</system.webServer>
+<system.web>
+  <identity />
+</system.web>
+<system.net>
+  <requestCaching>
+    <defaultFtpCachePolicy />
+    <defaultHttpCachePolicy />
+  </requestCaching>
+</system.net>
+<system.xml.serialization>
+  <schemaImporterExtensions>
+  </schemaImporterExtensions>
+</system.xml.serialization>
+<system.webServer>
+  <fastCgi>
+  </fastCgi>
+</system.webServer>
+<system.webServer>
+  <httpCompression directory="%TEMP%\iisexpress\IIS Temporary Compressed Files">
+    <staticTypes>
+      <add mimeType="text/*" enabled="true" />
+      <add mimeType="message/*" enabled="true" />
+      <add mimeType="application/x-javascript" enabled="true" />
+      <add mimeType="application/atom+xml" enabled="true" />
+      <add mimeType="application/xaml+xml" enabled="true" />
+      <add mimeType="*/*" enabled="false" />
+    </staticTypes>
+    <dynamicTypes>
+      <add mimeType="text/*" enabled="true" />
+      <add mimeType="message/*" enabled="true" />
+      <add mimeType="application/x-javascript" enabled="true" />
+      <add mimeType="*/*" enabled="false" />
+    </dynamicTypes>
+    <scheme name="gzip" dll="%IIS_BIN%\gzip.dll" />
+  </httpCompression>
+</system.webServer>
+<system.web>
+  <browserCaps userAgentCacheKeyLength="64">
+    <result type="System.Web.Mobile.MobileCapabilities, System.Web.Mobile, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </browserCaps>
+</system.web>
+<system.transactions>
+  <machineSettings />
+</system.transactions>
+<system.web>
+  <profile>
+    <properties>
+    </properties>
+    <providers>
+      <add name="AspNetSqlProfileProvider" type="System.Web.Profile.SqlProfileProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" connectionStringName="LocalSqlServer" applicationName="/" />
+    </providers>
+  </profile>
+</system.web>
+<system.xml.serialization>
+  <xmlSerializer />
+</system.xml.serialization>
+<system.web>
+  <trust level="Full" originUrl="" />
+</system.web>
+<system.web>
+  <caching>
+    <outputCacheSettings>
+      <outputCacheProfiles>
+      </outputCacheProfiles>
+    </outputCacheSettings>
+  </caching>
+</system.web>
+<system.diagnostics>
+  <assert />
+  <performanceCounters />
+  <sharedListeners>
+  </sharedListeners>
+  <sources>
+  </sources>
+  <switches>
+  </switches>
+  <trace>
+    <listeners>
+    </listeners>
+  </trace>
+</system.diagnostics>
+<system.webServer>
+  <rewrite>
+    <rewriteMaps>
+    </rewriteMaps>
+  </rewrite>
+</system.webServer>
+<system.applicationHost>
+  <sites>
+    <siteDefaults>
+      <bindings>
+      </bindings>
+      <limits />
+      <logFile logFormat="W3C" directory="%IIS_USER_HOME%\Logs" />
+      <traceFailedRequestsLogging enabled="true" directory="%IIS_USER_HOME%\TraceLogFiles" maxLogFileSizeKB="1024" />
+    </siteDefaults>
+    <applicationDefaults applicationPool="Clr4IntegratedAppPool" />
+    <virtualDirectoryDefaults allowSubDirConfig="true" />
+    <site name="WebSite1" id="1" serverAutoStart="true">
+      <bindings>
+        <binding protocol="http" bindingInformation=":8080:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="%IIS_SITES_HOME%\WebSite1" />
+      </application>
+    </site>
+    <site name="forge" id="2">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:58460:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr2IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="C:\Users\911\Documents\My Web Sites\forge" />
+      </application>
+    </site>
+    <site name="Personal Site" id="3">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:5946:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="%IIS_SITES_HOME%\Personal Site" />
+      </application>
+    </site>
+    <site name="2012WebApplication1" id="4">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:1131:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\2012WebApplication1\2012WebApplication1" />
+      </application>
+    </site>
+    <site name="LiveMultimediaService" id="5">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:16391:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\Live Multimedia\Live-MM\LiveMultimediaService" />
+      </application>
+    </site>
+    <site name="WcfService1" id="6">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:17163:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\SolutionLiveMultimedia\LiveMultimediaService" />
+      </application>
+    </site>
+    <site name="www.live-mm.com" id="7">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:21232:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\LiveMultimedia\www.live-mm.com" />
+        <virtualDirectory path="/music" physicalPath="C:\LiveMultimediaWork\music" />
+      </application>
+    </site>
+    <site name="WebSite1(1)" id="8">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:21282:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="C:\Users\911\Documents\Visual Studio 2012\WebSites\WebSite1" />
+      </application>
+    </site>
+    <site name="WebApplication1" id="9">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:9654:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\WebApplication1\WebApplication1" />
+      </application>
+    </site>
+    <site name="WcfService1(1)" id="10">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:35930:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\LiveMultimedia\WcfService1" />
+      </application>
+    </site>
+    <site name="WcfService1(2)" id="11">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:35950:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\Solution1\WcfService1" />
+      </application>
+    </site>
+    <site name="www.live-mm.com(1)" id="12">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:48751:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\SolutionLiveMultimedia\www.live-mm.com" />
+        <virtualDirectory path="/music" physicalPath="C:\LiveMultimediaWork\music" />
+      </application>
+    </site>
+    <site name="WebSite2" id="13">
+      <bindings>
+        <binding protocol="http" bindingInformation="*:1222:localhost" />
+      </bindings>
+      <limits />
+      <logFile />
+      <traceFailedRequestsLogging />
+      <applicationDefaults />
+      <virtualDirectoryDefaults />
+      <application path="/" applicationPool="Clr4IntegratedAppPool">
+        <virtualDirectoryDefaults />
+        <virtualDirectory path="/" physicalPath="D:\projects2012\test\WebSite2" />
+      </application>
+    </site>
+  </sites>
+</system.applicationHost>
+<system.webServer>
+  <handlers accessPolicy="Read, Script">
+    <add name="svc-Integrated" path="*.svc" verb="*" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv2.0" />
+    <add name="svc-ISAPI-2.0" path="*.svc" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" />
+    <add name="xoml-Integrated" path="*.xoml" verb="*" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv2.0" />
+    <add name="xoml-ISAPI-2.0" path="*.xoml" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" />
+    <add name="rules-Integrated" path="*.rules" verb="*" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv2.0" />
+    <add name="rules-ISAPI-2.0" path="*.rules" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" />
+    <add name="AXD-ISAPI-4.0_32bit" path="*.axd" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="PageHandlerFactory-ISAPI-4.0_32bit" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="SimpleHandlerFactory-ISAPI-4.0_32bit" path="*.ashx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="WebServiceHandlerFactory-ISAPI-4.0_32bit" path="*.asmx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="HttpRemotingHandlerFactory-rem-ISAPI-4.0_32bit" path="*.rem" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="HttpRemotingHandlerFactory-soap-ISAPI-4.0_32bit" path="*.soap" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="svc-ISAPI-4.0_32bit" path="*.svc" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="rules-ISAPI-4.0_32bit" path="*.rules" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="xoml-ISAPI-4.0_32bit" path="*.xoml" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="xamlx-ISAPI-4.0_32bit" path="*.xamlx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="aspq-ISAPI-4.0_32bit" path="*.aspq" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="cshtm-ISAPI-4.0_32bit" path="*.cshtm" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="cshtml-ISAPI-4.0_32bit" path="*.cshtml" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="vbhtm-ISAPI-4.0_32bit" path="*.vbhtm" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="vbhtml-ISAPI-4.0_32bit" path="*.vbhtml" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="TraceHandler-Integrated-4.0" path="trace.axd" verb="GET,HEAD,POST,DEBUG" type="System.Web.Handlers.TraceHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="WebAdminHandler-Integrated-4.0" path="WebAdmin.axd" verb="GET,DEBUG" type="System.Web.Handlers.WebAdminHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="AssemblyResourceLoader-Integrated-4.0" path="WebResource.axd" verb="GET,DEBUG" type="System.Web.Handlers.AssemblyResourceLoader" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="PageHandlerFactory-Integrated-4.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" type="System.Web.UI.PageHandlerFactory" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="SimpleHandlerFactory-Integrated-4.0" path="*.ashx" verb="GET,HEAD,POST,DEBUG" type="System.Web.UI.SimpleHandlerFactory" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="WebServiceHandlerFactory-Integrated-4.0" path="*.asmx" verb="GET,HEAD,POST,DEBUG" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="HttpRemotingHandlerFactory-rem-Integrated-4.0" path="*.rem" verb="GET,HEAD,POST,DEBUG" type="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="HttpRemotingHandlerFactory-soap-Integrated-4.0" path="*.soap" verb="GET,HEAD,POST,DEBUG" type="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="svc-Integrated-4.0" path="*.svc" verb="*" type="System.ServiceModel.Activation.ServiceHttpHandlerFactory, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="rules-Integrated-4.0" path="*.rules" verb="*" type="System.ServiceModel.Activation.ServiceHttpHandlerFactory, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="xoml-Integrated-4.0" path="*.xoml" verb="*" type="System.ServiceModel.Activation.ServiceHttpHandlerFactory, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="xamlx-Integrated-4.0" path="*.xamlx" verb="GET,HEAD,POST,DEBUG" type="System.Xaml.Hosting.XamlHttpHandlerFactory, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="aspq-Integrated-4.0" path="*.aspq" verb="GET,HEAD,POST,DEBUG" type="System.Web.HttpForbiddenHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="cshtm-Integrated-4.0" path="*.cshtm" verb="GET,HEAD,POST,DEBUG" type="System.Web.HttpForbiddenHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="cshtml-Integrated-4.0" path="*.cshtml" verb="GET,HEAD,POST,DEBUG" type="System.Web.HttpForbiddenHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="vbhtm-Integrated-4.0" path="*.vbhtm" verb="GET,HEAD,POST,DEBUG" type="System.Web.HttpForbiddenHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="vbhtml-Integrated-4.0" path="*.vbhtml" verb="GET,HEAD,POST,DEBUG" type="System.Web.HttpForbiddenHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="ScriptHandlerFactoryAppServices-Integrated-4.0" path="*_AppService.axd" verb="*" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="ScriptResourceIntegrated-4.0" path="ScriptResource.axd" verb="GET,HEAD" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="ASPClassic" path="*.asp" verb="GET,HEAD,POST" modules="IsapiModule" scriptProcessor="%IIS_BIN%\asp.dll" resourceType="File" />
+    <add name="SecurityCertificate" path="*.cer" verb="GET,HEAD,POST" modules="IsapiModule" scriptProcessor="%IIS_BIN%\asp.dll" resourceType="File" />
+    <add name="ISAPI-dll" path="*.dll" verb="*" modules="IsapiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />
+    <add name="TraceHandler-Integrated" path="trace.axd" verb="GET,HEAD,POST,DEBUG" type="System.Web.Handlers.TraceHandler" preCondition="integratedMode" />
+    <add name="WebAdminHandler-Integrated" path="WebAdmin.axd" verb="GET,DEBUG" type="System.Web.Handlers.WebAdminHandler" preCondition="integratedMode" />
+    <add name="AssemblyResourceLoader-Integrated" path="WebResource.axd" verb="GET,DEBUG" type="System.Web.Handlers.AssemblyResourceLoader" preCondition="integratedMode" />
+    <add name="PageHandlerFactory-Integrated" path="*.aspx" verb="GET,HEAD,POST,DEBUG" type="System.Web.UI.PageHandlerFactory" preCondition="integratedMode" />
+    <add name="SimpleHandlerFactory-Integrated" path="*.ashx" verb="GET,HEAD,POST,DEBUG" type="System.Web.UI.SimpleHandlerFactory" preCondition="integratedMode" />
+    <add name="WebServiceHandlerFactory-Integrated" path="*.asmx" verb="GET,HEAD,POST,DEBUG" type="System.Web.Services.Protocols.WebServiceHandlerFactory,System.Web.Services,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" preCondition="integratedMode,runtimeVersionv2.0" />
+    <add name="HttpRemotingHandlerFactory-rem-Integrated" path="*.rem" verb="GET,HEAD,POST,DEBUG" type="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory,System.Runtime.Remoting,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv2.0" />
+    <add name="HttpRemotingHandlerFactory-soap-Integrated" path="*.soap" verb="GET,HEAD,POST,DEBUG" type="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory,System.Runtime.Remoting,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089" preCondition="integratedMode,runtimeVersionv2.0" />
+    <add name="AXD-ISAPI-2.0" path="*.axd" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="PageHandlerFactory-ISAPI-2.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="SimpleHandlerFactory-ISAPI-2.0" path="*.ashx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="WebServiceHandlerFactory-ISAPI-2.0" path="*.asmx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="HttpRemotingHandlerFactory-rem-ISAPI-2.0" path="*.rem" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="HttpRemotingHandlerFactory-soap-ISAPI-2.0" path="*.soap" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="CGI-exe" path="*.exe" verb="*" modules="CgiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />
+    <add name="SSINC-stm" path="*.stm" verb="GET,POST" modules="ServerSideIncludeModule" resourceType="File" />
+    <add name="SSINC-shtm" path="*.shtm" verb="GET,POST" modules="ServerSideIncludeModule" resourceType="File" />
+    <add name="SSINC-shtml" path="*.shtml" verb="GET,POST" modules="ServerSideIncludeModule" resourceType="File" />
+    <add name="TRACEVerbHandler" path="*" verb="TRACE" modules="ProtocolSupportModule" requireAccess="None" />
+    <add name="OPTIONSVerbHandler" path="*" verb="OPTIONS" modules="ProtocolSupportModule" requireAccess="None" />
+    <add name="ExtensionlessUrl-ISAPI-4.0_32bit" path="*." verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+    <add name="ExtensionlessUrl-Integrated-4.0" path="*." verb="GET,HEAD,POST,DEBUG" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    <add name="StaticFile" path="*" verb="*" modules="StaticFileModule,DefaultDocumentModule,DirectoryListingModule" resourceType="Either" requireAccess="Read" />
+  </handlers>
+</system.webServer>
+<system.web>
+  <httpHandlers>
+    <add path="eurl.axd" type="System.Web.HttpNotFoundHandler" validate="true" verb="*" />
+    <add path="trace.axd" type="System.Web.Handlers.TraceHandler" validate="true" verb="*" />
+    <add path="WebResource.axd" type="System.Web.Handlers.AssemblyResourceLoader" validate="true" verb="GET" />
+    <add path="*_AppService.axd" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" verb="*" />
+    <add path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" verb="GET,HEAD" />
+    <add path="*.axd" type="System.Web.HttpNotFoundHandler" validate="true" verb="*" />
+    <add path="*.aspx" type="System.Web.UI.PageHandlerFactory" validate="true" verb="*" />
+    <add path="*.ashx" type="System.Web.UI.SimpleHandlerFactory" validate="true" verb="*" />
+    <add path="*.asmx" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" verb="*" />
+    <add path="*.rem" type="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" verb="*" />
+    <add path="*.soap" type="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" verb="*" />
+    <add path="*.asax" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.ascx" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.master" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.skin" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.browser" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.sitemap" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.dll.config" type="System.Web.StaticFileHandler" validate="true" verb="GET,HEAD" />
+    <add path="*.exe.config" type="System.Web.StaticFileHandler" validate="true" verb="GET,HEAD" />
+    <add path="*.config" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.cs" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.csproj" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.vb" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.vbproj" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.webinfo" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.licx" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.resx" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.resources" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.mdb" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.vjsproj" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.java" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.jsl" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.ldb" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.ad" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.dd" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.ldd" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.sd" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.cd" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.adprototype" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.lddprototype" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.sdm" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.sdmDocument" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.mdf" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.ldf" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.exclude" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.refresh" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.svc" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" verb="*" />
+    <add path="*.rules" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.xoml" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" verb="*" />
+    <add path="*.xamlx" type="System.Xaml.Hosting.XamlHttpHandlerFactory, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" verb="*" />
+    <add path="*.aspq" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.cshtm" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.cshtml" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.vbhtm" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*.vbhtml" type="System.Web.HttpForbiddenHandler" validate="true" verb="*" />
+    <add path="*" type="System.Web.DefaultHttpHandler" validate="true" verb="GET,HEAD,POST" />
+    <add path="*" type="System.Web.HttpMethodNotAllowedHandler" validate="true" verb="*" />
+  </httpHandlers>
+</system.web>
+<system.web>
+  <securityPolicy>
+    <trustLevel name="Full" policyFile="internal" />
+    <trustLevel name="High" policyFile="web_hightrust.config" />
+    <trustLevel name="Medium" policyFile="web_mediumtrust.config" />
+    <trustLevel name="Low" policyFile="web_lowtrust.config" />
+    <trustLevel name="Minimal" policyFile="web_minimaltrust.config" />
+  </securityPolicy>
+</system.web>
+<connectionStrings>
+  <add connectionString="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true" name="LocalSqlServer" providerName="System.Data.SqlClient" />
+</connectionStrings>
+<system.net>
+  <authenticationModules>
+  </authenticationModules>
+</system.net>
+<system.net>
+  <mailSettings>
+    <smtp>
+      <network />
+      <specifiedPickupDirectory />
+    </smtp>
+  </mailSettings>
+</system.net>
+<system.webServer>
+  <webdav>
+    <authoring>
+      <fileSystem />
+      <properties>
+      </properties>
+      <locks enabled="true" lockStore="webdav_simple_lock" />
+    </authoring>
+  </webdav>
+</system.webServer>
+<system.web>
+  <deviceFilters>
+  </deviceFilters>
+</system.web>
+<system.web>
+  <healthMonitoring>
+    <bufferModes>
+      <add maxBufferSize="100" maxBufferThreads="1" maxFlushSize="20" name="Critical Notification" regularFlushInterval="Infinite" urgentFlushInterval="00:01:00" urgentFlushThreshold="1" />
+      <add maxBufferSize="300" maxBufferThreads="1" maxFlushSize="20" name="Notification" regularFlushInterval="Infinite" urgentFlushInterval="00:01:00" urgentFlushThreshold="1" />
+      <add maxBufferSize="1000" maxBufferThreads="1" maxFlushSize="100" name="Analysis" regularFlushInterval="00:05:00" urgentFlushInterval="00:01:00" urgentFlushThreshold="100" />
+      <add maxBufferSize="1000" maxBufferThreads="1" maxFlushSize="200" name="Logging" regularFlushInterval="00:30:00" urgentFlushInterval="00:05:00" urgentFlushThreshold="800" />
+    </bufferModes>
+    <eventMappings>
+      <add endEventCode="2147483647" name="All Events" startEventCode="0" type="System.Web.Management.WebBaseEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Heartbeats" startEventCode="0" type="System.Web.Management.WebHeartbeatEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Application Lifetime Events" startEventCode="0" type="System.Web.Management.WebApplicationLifetimeEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Request Processing Events" startEventCode="0" type="System.Web.Management.WebRequestEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="All Errors" startEventCode="0" type="System.Web.Management.WebBaseErrorEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Infrastructure Errors" startEventCode="0" type="System.Web.Management.WebErrorEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Request Processing Errors" startEventCode="0" type="System.Web.Management.WebRequestErrorEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="All Audits" startEventCode="0" type="System.Web.Management.WebAuditEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Failure Audits" startEventCode="0" type="System.Web.Management.WebFailureAuditEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add endEventCode="2147483647" name="Success Audits" startEventCode="0" type="System.Web.Management.WebSuccessAuditEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+    </eventMappings>
+    <profiles>
+      <add custom="" maxLimit="Infinite" minInstances="1" minInterval="00:01:00" name="Default" />
+      <add custom="" maxLimit="Infinite" minInstances="1" minInterval="00:00:00" name="Critical" />
+    </profiles>
+    <providers>
+      <add name="EventLogProvider" type="System.Web.Management.EventLogWebEventProvider,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+      <add name="SqlWebEventProvider" type="System.Web.Management.SqlWebEventProvider,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" connectionStringName="LocalSqlServer" maxEventDetailsLength="1073741823" buffer="false" bufferMode="Notification" />
+      <add name="WmiWebEventProvider" type="System.Web.Management.WmiWebEventProvider,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />
+    </providers>
+    <rules>
+      <add custom="" eventName="All Errors" maxLimit="Infinite" minInstances="1" minInterval="00:01:00" name="All Errors Default" profile="Default" provider="EventLogProvider" />
+      <add custom="" eventName="Failure Audits" maxLimit="Infinite" minInstances="1" minInterval="00:01:00" name="Failure Audits Default" profile="Default" provider="EventLogProvider" />
+    </rules>
+  </healthMonitoring>
+</system.web>
+<system.web>
+  <siteMap>
+    <providers>
+      <add name="AspNetXmlSiteMapProvider" type="System.Web.XmlSiteMapProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" siteMapFile="web.sitemap" />
+    </providers>
+  </siteMap>
+</system.web>
+<appSettings>
+</appSettings>
+<system.transactions>
+  <defaultSettings />
+</system.transactions>
+<system.web>
+  <deployment />
+</system.web>
+<system.web>
+  <roleManager>
+    <providers>
+      <add name="AspNetSqlRoleProvider" type="System.Web.Security.SqlRoleProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" connectionStringName="LocalSqlServer" applicationName="/" />
+      <add name="AspNetWindowsTokenRoleProvider" type="System.Web.Security.WindowsTokenRoleProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" applicationName="/" />
+    </providers>
+  </roleManager>
+</system.web>
+<system.webServer>
+  <asp scriptErrorSentToBrowser="true">
+    <session />
+    <comPlus />
+    <cache diskTemplateCacheDirectory="%TEMP%\iisexpress\ASP Compiled Templates" />
+    <limits />
+  </asp>
+</system.webServer>
+<system.webServer>
+  <globalModules>
+    <add name="UriCacheModule" image="%IIS_BIN%\cachuri.dll" />
+    <add name="TokenCacheModule" image="%IIS_BIN%\cachtokn.dll" />
+    <add name="DynamicCompressionModule" image="%IIS_BIN%\compdyn.dll" />
+    <add name="StaticCompressionModule" image="%IIS_BIN%\compstat.dll" />
+    <add name="DefaultDocumentModule" image="%IIS_BIN%\defdoc.dll" />
+    <add name="DirectoryListingModule" image="%IIS_BIN%\dirlist.dll" />
+    <add name="ProtocolSupportModule" image="%IIS_BIN%\protsup.dll" />
+    <add name="HttpRedirectionModule" image="%IIS_BIN%\redirect.dll" />
+    <add name="ServerSideIncludeModule" image="%IIS_BIN%\iis_ssi.dll" />
+    <add name="StaticFileModule" image="%IIS_BIN%\static.dll" />
+    <add name="AnonymousAuthenticationModule" image="%IIS_BIN%\authanon.dll" />
+    <add name="CertificateMappingAuthenticationModule" image="%IIS_BIN%\authcert.dll" />
+    <add name="UrlAuthorizationModule" image="%IIS_BIN%\urlauthz.dll" />
+    <add name="BasicAuthenticationModule" image="%IIS_BIN%\authbas.dll" />
+    <add name="WindowsAuthenticationModule" image="%IIS_BIN%\authsspi.dll" />
+    <add name="IISCertificateMappingAuthenticationModule" image="%IIS_BIN%\authmap.dll" />
+    <add name="IpRestrictionModule" image="%IIS_BIN%\iprestr.dll" />
+    <add name="RequestFilteringModule" image="%IIS_BIN%\modrqflt.dll" />
+    <add name="CustomLoggingModule" image="%IIS_BIN%\logcust.dll" />
+    <add name="CustomErrorModule" image="%IIS_BIN%\custerr.dll" />
+    <add name="HttpLoggingModule" image="%IIS_BIN%\loghttp.dll" />
+    <add name="FailedRequestsTracingModule" image="%IIS_BIN%\iisfreb.dll" />
+    <add name="RequestMonitorModule" image="%IIS_BIN%\iisreqs.dll" />
+    <add name="IsapiModule" image="%IIS_BIN%\isapi.dll" />
+    <add name="IsapiFilterModule" image="%IIS_BIN%\filter.dll" />
+    <add name="CgiModule" image="%IIS_BIN%\cgi.dll" />
+    <add name="FastCgiModule" image="%IIS_BIN%\iisfcgi.dll" />
+    <add name="RewriteModule" image="%IIS_BIN%\rewrite.dll" />
+    <add name="ConfigurationValidationModule" image="%IIS_BIN%\validcfg.dll" />
+    <add name="WebMatrixSupportModule" image="%IIS_BIN%\webmatrixsup.dll" />
+    <add name="ManagedEngine" image="%windir%\Microsoft.NET\Framework\v2.0.50727\webengine.dll" preCondition="integratedMode,runtimeVersionv2.0,bitness32" />
+    <add name="ManagedEngineV4.0_32bit" image="%windir%\Microsoft.NET\Framework\v4.0.30319\webengine4.dll" preCondition="integratedMode,runtimeVersionv4.0,bitness32" />
+  </globalModules>
+</system.webServer>
+<system.webServer>
+  <modules>
+    <add name="DynamicCompressionModule" />
+    <add name="StaticCompressionModule" />
+    <add name="DefaultDocumentModule" />
+    <add name="DirectoryListingModule" />
+    <add name="IsapiFilterModule" />
+    <add name="ProtocolSupportModule" />
+    <add name="HttpRedirectionModule" />
+    <add name="ServerSideIncludeModule" />
+    <add name="StaticFileModule" />
+    <add name="AnonymousAuthenticationModule" />
+    <add name="CertificateMappingAuthenticationModule" />
+    <add name="UrlAuthorizationModule" />
+    <add name="BasicAuthenticationModule" />
+    <add name="WindowsAuthenticationModule" />
+    <add name="IISCertificateMappingAuthenticationModule" />
+    <add name="IpRestrictionModule" />
+    <add name="RequestFilteringModule" />
+    <add name="CustomLoggingModule" />
+    <add name="CustomErrorModule" />
+    <add name="IsapiModule" />
+    <add name="HttpLoggingModule" />
+    <add name="FailedRequestsTracingModule" />
+    <add name="CgiModule" />
+    <add name="FastCgiModule" />
+    <add name="RewriteModule" />
+    <add name="ConfigurationValidationModule" />
+    <add name="WebMatrixSupportModule" />
+    <add name="OutputCache" type="System.Web.Caching.OutputCacheModule" preCondition="managedHandler" />
+    <add name="Session" type="System.Web.SessionState.SessionStateModule" preCondition="managedHandler" />
+    <add name="WindowsAuthentication" type="System.Web.Security.WindowsAuthenticationModule" preCondition="managedHandler" />
+    <add name="FormsAuthentication" type="System.Web.Security.FormsAuthenticationModule" preCondition="managedHandler" />
+    <add name="DefaultAuthentication" type="System.Web.Security.DefaultAuthenticationModule" preCondition="managedHandler" />
+    <add name="RoleManager" type="System.Web.Security.RoleManagerModule" preCondition="managedHandler" />
+    <add name="UrlAuthorization" type="System.Web.Security.UrlAuthorizationModule" preCondition="managedHandler" />
+    <add name="FileAuthorization" type="System.Web.Security.FileAuthorizationModule" preCondition="managedHandler" />
+    <add name="AnonymousIdentification" type="System.Web.Security.AnonymousIdentificationModule" preCondition="managedHandler" />
+    <add name="Profile" type="System.Web.Profile.ProfileModule" preCondition="managedHandler" />
+    <add name="UrlMappingsModule" type="System.Web.UrlMappingsModule" preCondition="managedHandler" />
+    <add name="ServiceModel-4.0" type="System.ServiceModel.Activation.ServiceHttpModule,System.ServiceModel.Activation,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35" preCondition="managedHandler,runtimeVersionv4.0" />
+    <add name="UrlRoutingModule-4.0" type="System.Web.Routing.UrlRoutingModule" preCondition="managedHandler,runtimeVersionv4.0" />
+    <add name="ScriptModule-4.0" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" preCondition="managedHandler,runtimeVersionv4.0" />
+    <add name="ServiceModel" type="System.ServiceModel.Activation.HttpModule, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler,runtimeVersionv2.0" />
+  </modules>
+</system.webServer>
+<system.webServer>
+  <security>
+    <authentication>
+      <digestAuthentication enabled="false" />
+    </authentication>
+  </security>
+</system.webServer>
+<system.webServer>
+  <security>
+    <authentication>
+      <iisClientCertificateMappingAuthentication enabled="false">
+        <manyToOneMappings>
+        </manyToOneMappings>
+        <oneToOneMappings>
+        </oneToOneMappings>
+      </iisClientCertificateMappingAuthentication>
+    </authentication>
+  </security>
+</system.webServer>
+<system.webServer>
+  <security>
+    <isapiCgiRestriction notListedIsapisAllowed="true" notListedCgisAllowed="true">
+      <add path="%windir%\Microsoft.NET\Framework\v4.0.30319\webengine4.dll" allowed="true" groupId="ASP.NET_v4.0" description="ASP.NET_v4.0" />
+    </isapiCgiRestriction>
+  </security>
+</system.webServer>
+<system.web>
+  <customErrors>
+  </customErrors>
+</system.web>
+<system.net>
+  <settings>
+    <httpWebRequest />
+    <ipv6 />
+    <performanceCounters />
+    <servicePointManager />
+    <socket />
+    <webProxyScript />
+  </settings>
+</system.net>
+<system.net>
+  <webRequestModules>
+  </webRequestModules>
+</system.net>
+<system.webServer>
+  <httpProtocol>
+    <customHeaders>
+      <add name="X-Powered-By" value="ASP.NET" />
+    </customHeaders>
+    <redirectHeaders>
+    </redirectHeaders>
+  </httpProtocol>
+</system.webServer>
+<system.webServer>
+  <security>
+    <authentication>
+      <clientCertificateMappingAuthentication enabled="false" />
+    </authentication>
+  </security>
+</system.webServer>
+<system.web>
+  <anonymousIdentification />
+</system.web>
+<system.web>
+  <httpModules>
+    <add name="OutputCache" type="System.Web.Caching.OutputCacheModule" />
+    <add name="Session" type="System.Web.SessionState.SessionStateModule" />
+    <add name="WindowsAuthentication" type="System.Web.Security.WindowsAuthenticationModule" />
+    <add name="FormsAuthentication" type="System.Web.Security.FormsAuthenticationModule" />
+    <add name="PassportAuthentication" type="System.Web.Security.PassportAuthenticationModule" />
+    <add name="RoleManager" type="System.Web.Security.RoleManagerModule" />
+    <add name="UrlAuthorization" type="System.Web.Security.UrlAuthorizationModule" />
+    <add name="FileAuthorization" type="System.Web.Security.FileAuthorizationModule" />
+    <add name="AnonymousIdentification" type="System.Web.Security.AnonymousIdentificationModule" />
+    <add name="Profile" type="System.Web.Profile.ProfileModule" />
+    <add name="ErrorHandlerModule" type="System.Web.Mobile.ErrorHandlerModule, System.Web.Mobile, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <add name="ServiceModel" type="System.ServiceModel.Activation.HttpModule, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <add name="UrlRoutingModule-4.0" type="System.Web.Routing.UrlRoutingModule" />
+    <add name="ScriptModule-4.0" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+  </httpModules>
+</system.web>
+<system.web>
+  <httpRuntime />
+</system.web>
+<system.web>
+  <caching>
+    <cache />
+  </caching>
+</system.web>
+<configProtectedData defaultProvider="RsaProtectedConfigurationProvider">
+  <providers>
+    <add name="RsaProtectedConfigurationProvider" type="System.Configuration.RsaProtectedConfigurationProvider,System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" description="Uses RsaCryptoServiceProvider to encrypt and decrypt" keyContainerName="NetFrameworkConfigurationKey" cspProviderName="" useMachineContainer="true" useOAEP="false" />
+    <add name="DataProtectionConfigurationProvider" type="System.Configuration.DpapiProtectedConfigurationProvider,System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" description="Uses CryptProtectData and CryptUnProtectData Windows APIs to encrypt and decrypt" useMachineProtection="true" keyEntropy="" />
+    <add name="IISWASOnlyRsaProvider" type="" description="Uses RsaCryptoServiceProvider to encrypt and decrypt" keyContainerName="iisWasKey" cspProviderName="" useMachineContainer="true" useOAEP="false" />
+    <add name="AesProvider" type="Microsoft.ApplicationHost.AesProtectedConfigurationProvider" description="Uses an AES session key to encrypt and decrypt" keyContainerName="iisConfigurationKey" cspProviderName="" useOAEP="false" useMachineContainer="true" sessionKey="AQIAAA5mAAAApAAAKmFQvWHDEETRz8l2bjZlRxIkwcqTFaCUnCLljn3Q1OkesrhEO9YyLyx4bUhsj1/DyShAv7OAFFhXlrlomaornnk5PLeyO4lIXxaiT33yOFUUgxDx4GSaygkqghVV0tO5yQ/XguUBp2juMfZyztnsNa4pLcz7ZNZQ6p4yn9hxwNs=" />
+    <add name="IISWASOnlyAesProvider" type="Microsoft.ApplicationHost.AesProtectedConfigurationProvider" description="Uses an AES session key to encrypt and decrypt" keyContainerName="iisWasKey" cspProviderName="" useOAEP="false" useMachineContainer="true" sessionKey="AQIAAA5mAAAApAAA4WoiRJ8KHwzAG8AgejPxEOO4/2Vhkolbwo/8gZeNdUDSD36m55hWv4uC9tr/MlKdnwRLL0NhT50Gccyftqz5xTZ0dg5FtvQhTw/he1NwexTKbV+I4Zrd+sZUqHZTsr7JiEr6OHGXL70qoISW5G2m9U8wKT3caPiDPNj2aAaYPLo=" />
+  </providers>
+</configProtectedData>
+<system.webServer>
+  <rewrite>
+    <allowedServerVariables>
+    </allowedServerVariables>
+  </rewrite>
+</system.webServer>
+<system.web>
+  <pages>
+    <controls>
+      <add assembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="System.Web.UI.WebControls.WebParts" tagPrefix="asp" />
+      <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI" tagPrefix="asp" />
+      <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.WebControls" tagPrefix="asp" />
+      <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.WebControls.Expressions" tagPrefix="asp" />
+      <add assembly="System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.DynamicData" tagPrefix="asp" />
+      <add assembly="System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" namespace="System.Web.UI.WebControls" tagPrefix="asp" />
+    </controls>
+    <namespaces>
+      <add namespace="System" />
+      <add namespace="System.Collections" />
+      <add namespace="System.Collections.Generic" />
+      <add namespace="System.Collections.Specialized" />
+      <add namespace="System.ComponentModel.DataAnnotations" />
+      <add namespace="System.Configuration" />
+      <add namespace="System.Linq" />
+      <add namespace="System.Text" />
+      <add namespace="System.Text.RegularExpressions" />
+      <add namespace="System.Web" />
+      <add namespace="System.Web.Caching" />
+      <add namespace="System.Web.DynamicData" />
+      <add namespace="System.Web.SessionState" />
+      <add namespace="System.Web.Security" />
+      <add namespace="System.Web.Profile" />
+      <add namespace="System.Web.UI" />
+      <add namespace="System.Web.UI.WebControls" />
+      <add namespace="System.Web.UI.WebControls.WebParts" />
+      <add namespace="System.Web.UI.HtmlControls" />
+      <add namespace="System.Xml.Linq" />
+    </namespaces>
+    <tagMapping>
+    </tagMapping>
+  </pages>
+</system.web>
+<system.web>
+  <caching>
+    <outputCache />
+  </caching>
+</system.web>
+<system.web>
+  <membership>
+    <providers>
+      <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" connectionStringName="LocalSqlServer" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="true" applicationName="/" requiresUniqueEmail="false" passwordFormat="Hashed" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="1" passwordAttemptWindow="10" passwordStrengthRegularExpression="" />
+    </providers>
+  </membership>
+</system.web>
+<system.web>
+  <processModel autoConfig="true" />
+</system.web>
+<system.webServer>
+  <rewrite>
+    <globalRules>
+    </globalRules>
+  </rewrite>
+</system.webServer>
+<system.webServer>
+  <security>
+    <authentication>
+      <windowsAuthentication enabled="false">
+        <providers>
+          <add value="Negotiate" />
+          <add value="NTLM" />
+        </providers>
+        <extendedProtection>
+        </extendedProtection>
+      </windowsAuthentication>
+    </authentication>
+  </security>
+</system.webServer>
+<system.webServer>
+  <security>
+    <requestFiltering>
+      <fileExtensions allowUnlisted="true" applyToWebDAV="true">
+        <add fileExtension=".asa" allowed="false" />
+        <add fileExtension=".asax" allowed="false" />
+        <add fileExtension=".ascx" allowed="false" />
+        <add fileExtension=".master" allowed="false" />
+        <add fileExtension=".skin" allowed="false" />
+        <add fileExtension=".browser" allowed="false" />
+        <add fileExtension=".sitemap" allowed="false" />
+        <add fileExtension=".config" allowed="false" />
+        <add fileExtension=".cs" allowed="false" />
+        <add fileExtension=".csproj" allowed="false" />
+        <add fileExtension=".vb" allowed="false" />
+        <add fileExtension=".vbproj" allowed="false" />
+        <add fileExtension=".webinfo" allowed="false" />
+        <add fileExtension=".licx" allowed="false" />
+        <add fileExtension=".resx" allowed="false" />
+        <add fileExtension=".resources" allowed="false" />
+        <add fileExtension=".mdb" allowed="false" />
+        <add fileExtension=".vjsproj" allowed="false" />
+        <add fileExtension=".java" allowed="false" />
+        <add fileExtension=".jsl" allowed="false" />
+        <add fileExtension=".ldb" allowed="false" />
+        <add fileExtension=".dsdgm" allowed="false" />
+        <add fileExtension=".ssdgm" allowed="false" />
+        <add fileExtension=".lsad" allowed="false" />
+        <add fileExtension=".ssmap" allowed="false" />
+        <add fileExtension=".cd" allowed="false" />
+        <add fileExtension=".dsprototype" allowed="false" />
+        <add fileExtension=".lsaprototype" allowed="false" />
+        <add fileExtension=".sdm" allowed="false" />
+        <add fileExtension=".sdmDocument" allowed="false" />
+        <add fileExtension=".mdf" allowed="false" />
+        <add fileExtension=".ldf" allowed="false" />
+        <add fileExtension=".ad" allowed="false" />
+        <add fileExtension=".dd" allowed="false" />
+        <add fileExtension=".ldd" allowed="false" />
+        <add fileExtension=".sd" allowed="false" />
+        <add fileExtension=".adprototype" allowed="false" />
+        <add fileExtension=".lddprototype" allowed="false" />
+        <add fileExtension=".exclude" allowed="false" />
+        <add fileExtension=".refresh" allowed="false" />
+        <add fileExtension=".compiled" allowed="false" />
+        <add fileExtension=".msgx" allowed="false" />
+        <add fileExtension=".vsdisco" allowed="false" />
+        <add fileExtension=".rules" allowed="false" />
+      </fileExtensions>
+      <requestLimits>
+        <headerLimits>
+        </headerLimits>
+      </requestLimits>
+      <verbs allowUnlisted="true" applyToWebDAV="true">
+      </verbs>
+      <hiddenSegments applyToWebDAV="true">
+        <add segment="web.config" />
+        <add segment="bin" />
+        <add segment="App_code" />
+        <add segment="App_GlobalResources" />
+        <add segment="App_LocalResources" />
+        <add segment="App_WebReferences" />
+        <add segment="App_Data" />
+        <add segment="App_Browsers" />
+      </hiddenSegments>
+      <alwaysAllowedUrls>
+      </alwaysAllowedUrls>
+      <alwaysAllowedQueryStrings>
+      </alwaysAllowedQueryStrings>
+      <denyUrlSequences>
+      </denyUrlSequences>
+      <denyQueryStringSequences>
+      </denyQueryStringSequences>
+      <filteringRules>
+      </filteringRules>
+    </requestFiltering>
+  </security>
+</system.webServer>
+<system.web>
+  <webServices>
+    <conformanceWarnings>
+    </conformanceWarnings>
+    <diagnostics />
+    <protocols>
+    </protocols>
+    <serviceDescriptionFormatExtensionTypes>
+    </serviceDescriptionFormatExtensionTypes>
+    <soapEnvelopeProcessing />
+    <soapExtensionImporterTypes>
+    </soapExtensionImporterTypes>
+    <soapExtensionReflectorTypes>
+    </soapExtensionReflectorTypes>
+    <soapExtensionTypes>
+    </soapExtensionTypes>
+    <soapServerProtocolFactory />
+    <soapTransportImporterTypes>
+    </soapTransportImporterTypes>
+    <wsdlHelpGenerator />
+  </webServices>
+</system.web>
+<system.data>
+  <DbProviderFactories>
+    <add invariant="System.Data.SqlServerCe.4.0" name="Microsoft SQL Server Compact Data Provider 4.0" description=".NET Framework Data Provider for Microsoft SQL Server Compact" type="System.Data.SqlServerCe.SqlCeProviderFactory, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </DbProviderFactories>
+</system.data>
+<system.applicationHost>
+  <listenerAdapters>
+    <add name="http" />
+  </listenerAdapters>
+</system.applicationHost>
+<system.webServer>
+  <security>
+    <ipSecurity allowUnlisted="true">
+    </ipSecurity>
+  </security>
+</system.webServer>
+<system.web>
+  <machineKey />
+</system.web>
+<system.webServer>
+  <tracing>
+    <traceProviderDefinitions>
+      <add name="WWW Server" guid="{3a2a4e84-4c21-4981-ae10-3fda0d9b0f83}">
+        <areas>
+          <add name="Authentication" value="2" />
+          <add name="Security" value="4" />
+          <add name="Filter" value="8" />
+          <add name="StaticFile" value="16" />
+          <add name="CGI" value="32" />
+          <add name="Compression" value="64" />
+          <add name="Cache" value="128" />
+          <add name="RequestNotifications" value="256" />
+          <add name="Module" value="512" />
+          <add name="Rewrite" value="1024" />
+          <add name="FastCGI" value="4096" />
+        </areas>
+      </add>
+      <add name="ASP" guid="{06b94d9a-b15e-456e-a4ef-37c984a2cb4b}">
+        <areas>
+        </areas>
+      </add>
+      <add name="ISAPI Extension" guid="{a1c2040e-8840-4c31-ba11-9871031a19ea}">
+        <areas>
+        </areas>
+      </add>
+      <add name="ASPNET" guid="{AFF081FE-0247-4275-9C4E-021F3DC1DA35}">
+        <areas>
+          <add name="Infrastructure" value="1" />
+          <add name="Module" value="2" />
+          <add name="Page" value="4" />
+          <add name="AppServices" value="8" />
+        </areas>
+      </add>
+    </traceProviderDefinitions>
+  </tracing>
+</system.webServer>
+<system.web>
+  <authorization>
+    <allow users="*" />
+  </authorization>
+</system.web>

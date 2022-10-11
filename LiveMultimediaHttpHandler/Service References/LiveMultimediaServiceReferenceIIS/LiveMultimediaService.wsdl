@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="LiveMultimediaService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LiveMultimediaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="LiveMultimediaService" location="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_ILiveMultimediaService" type="i0:ILiveMultimediaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocalLogin">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalCheckRequestMultimediaFromServer">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalCheckRequestMultimediaFromServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalGetListMultimediaFiles">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalGetListMultimediaFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalSaveListMultimediaFiles">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/LocalSaveListMultimediaFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLogin">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteRegisterNewUser">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteRegisterNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteTransferMultimediaFileGUIDFromServerToClient">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteTransferMultimediaFileGUIDFromServerToClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageStreamChunkCount">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/InsertMessageStreamChunkCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLiveMultimedia_Next">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLiveMultimedia_Next" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteLiveMultimedia_Unload">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteLiveMultimedia_Unload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteGetContentMultimediaSource">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteGetContentMultimediaSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListMultimediaSource">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListMultimediaByAlbum">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/GetListMultimediaByAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteSetMultimediaFilebyUserToken">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteSetMultimediaFilebyUserToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoteGetMultimediaFilebyUserToken">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/RemoteGetMultimediaFilebyUserToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLog">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/WriteLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/SendFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadFile">
+      <soap:operation soapAction="LiveMultimediaService/ILiveMultimediaService/ReadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LiveMultimediaService">
+    <wsdl:port name="BasicHttpBinding_ILiveMultimediaService" binding="tns:BasicHttpBinding_ILiveMultimediaService">
+      <soap:address location="http://localhost/LiveMultimediaService/LiveMultimediaSvc.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

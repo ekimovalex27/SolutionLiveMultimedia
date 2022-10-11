@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="LiveMultimediaService" elementFormDefault="qualified" targetNamespace="LiveMultimediaService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+  <xs:import schemaLocation="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://live-mm.com/LiveMultimediaService/LiveMultimediaSvc.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="LocalLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalLoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalCheckRequestMultimediaFromServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalCheckRequestMultimediaFromServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalCheckRequestMultimediaFromServerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetListMultimediaFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetListMultimediaFilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="LocalGetListMultimediaFilesResult" nillable="true" type="q1:ArrayOfMultimediaFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalSaveListMultimediaFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListMultimediaFiles" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalSaveListMultimediaFilesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteLoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteRegisterNewUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTariffPlan" type="xs:int" />
+        <xs:element minOccurs="0" name="IdLanguage" type="xs:int" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteRegisterNewUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteRegisterNewUserResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteTransferMultimediaFileGUIDFromServerToClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="ClientBrowser" nillable="true" type="q3:ClientInternetBrowser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteTransferMultimediaFileGUIDFromServerToClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMessageStreamChunkCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="buffer" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isFinalTransaction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isFirstCall" type="xs:boolean" />
+        <xs:element minOccurs="0" name="LengthFile" type="xs:long" />
+        <xs:element minOccurs="0" name="Position" type="xs:long" />
+        <xs:element minOccurs="0" name="ChunkCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMessageStreamChunkCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertMessageStreamChunkCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLiveMultimedia_Next">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="ClientBrowser" nillable="true" type="q4:ClientInternetBrowser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLiveMultimedia_NextResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLiveMultimedia_Unload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLiveMultimedia_UnloadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteGetContentMultimediaSource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdMultimediaSource" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteGetContentMultimediaSourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RemoteGetContentMultimediaSourceResult" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListMultimediaSource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListMultimediaSourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="GetListMultimediaSourceResult" nillable="true" type="q6:ArrayOfMultimediaSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListMultimediaByAlbum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Album" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListMultimediaByAlbumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="GetListMultimediaByAlbumResult" nillable="true" type="q7:ArrayOfMultimediaFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteSetMultimediaFilebyUserToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="buffer" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="IsReadyServer" type="xs:boolean" />
+        <xs:element minOccurs="0" name="LengthFile" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteSetMultimediaFilebyUserTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteSetMultimediaFilebyUserTokenResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsReadyServer" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteGetMultimediaFilebyUserToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileBuffer" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="MultimediaFileLength" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteGetMultimediaFilebyUserTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteGetMultimediaFilebyUserTokenResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MultimediaFileBuffer" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="MultimediaFileLength" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTypeUser" type="xs:int" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Procedure" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteLogResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/Message" name="stream" type="q8:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendFileResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/Message" name="ReadFileResult" type="q9:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

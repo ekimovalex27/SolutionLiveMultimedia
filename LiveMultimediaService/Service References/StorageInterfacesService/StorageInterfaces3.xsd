@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/StorageInterfacesData" />
+  <xs:import schemaLocation="http://service.storageint.com/StorageInterfaces.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetLanguages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLanguagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetLanguagesResult" nillable="true" type="q1:TupleOfArrayOfLanguageInfostring58IzrCRE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DefaultLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Project" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetLocalizationResult" nillable="true" type="q2:TupleOfArrayOfLocalizationElementstringstringfpVz983_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalizationByList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DefaultLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Project" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/StorageInterfacesData" minOccurs="0" name="ListDefaultElements" nillable="true" type="q3:ArrayOfLocalizationElement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalizationByListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetLocalizationByListResult" nillable="true" type="q4:TupleOfArrayOfLocalizationElementstringstringfpVz983_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalizationElement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DefaultLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Project" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ElementName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsRefreshTranslate" type="xs:boolean" />
+        <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalizationElementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetLocalizationElementResult" nillable="true" type="q5:TupleOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranslateString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TranslateFromLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TranslateToLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StringForTranslate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranslateStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="TranslateStringResult" nillable="true" type="q6:TupleOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranslateArray">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DefaultLanguage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ArrayForTranslation" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranslateArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="TranslateArrayResult" nillable="true" type="q8:TupleOfArrayOfstringstring9_SUPjmKX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

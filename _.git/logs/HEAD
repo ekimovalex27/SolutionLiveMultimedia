@@ -1,0 +1,22 @@
+0000000000000000000000000000000000000000 fff52682057e36b94f47210f3942ec3d28cd2f23 Aleksei Ekimov <ekimov_alex@outlook.com> 1405679683 +0400	commit (initial): Process change interface for localization
+fff52682057e36b94f47210f3942ec3d28cd2f23 1f5bd6b8fc66e9a6e435aad8314e48d570fee466 Aleksei Ekimov <ekimov_alex@outlook.com> 1405684001 +0400	commit: Before new design default page
+1f5bd6b8fc66e9a6e435aad8314e48d570fee466 a09eb581d6e627911a2c7e680c0f41335aac145e Aleksei Ekimov <ekimov_alex@outlook.com> 1406401306 +0400	commit: Published new interface
+a09eb581d6e627911a2c7e680c0f41335aac145e a8ab065c61911e5689c25b80b5b4a3386acd4ee6 Aleksei Ekimov <ekimov_alex@outlook.com> 1406883605 +0400	commit: Ввод класса Helper
+a8ab065c61911e5689c25b80b5b4a3386acd4ee6 29183cde75e7b2033494b05db98d01798bf8781f Aleksei Ekimov <ekimov_alex@outlook.com> 1406914689 +0400	commit: Рабочая ветвь
+29183cde75e7b2033494b05db98d01798bf8781f 0e8c20162f630863e7d846c94a6bb06f86f8ceb4 Aleksei Ekimov <ekimov_alex@outlook.com> 1407241182 +0400	commit: Подправлена работа кнопки выбора языка
+0e8c20162f630863e7d846c94a6bb06f86f8ceb4 51185214d30ef70668f7d618e14d963582891998 Aleksei Ekimov <ekimov_alex@outlook.com> 1407746621 +0400	commit: После переноса на новый компьютер
+51185214d30ef70668f7d618e14d963582891998 c1083f92b4625437934fa7c5f8464ab4cf9fd1e4 Aleksei Ekimov <ekimov_alex@outlook.com> 1408014787 +0400	commit: 1. Перенос меню 2. Локализация 3. Порядок прохода мультимедиа в javascript
+c1083f92b4625437934fa7c5f8464ab4cf9fd1e4 2828674367a0c3feb53b5331e10168c76b642998 Aleksei Ekimov <ekimov_alex@outlook.com> 1410171999 +0400	commit: Стабильная версия
+2828674367a0c3feb53b5331e10168c76b642998 18df9027f10c76c0ff3e0e2d6e4c04c734d80a9f Aleksei Ekimov <ekimov_alex@outlook.com> 1410510924 +0400	commit: Стабильная сборка
+18df9027f10c76c0ff3e0e2d6e4c04c734d80a9f c8ec19a477afb596ab5dfcde0a57cd6f2b150087 Aleksei Ekimov <ekimov_alex@outlook.com> 1410787720 +0400	commit: Промежуточная сборка на пути к универсальным элементам
+c8ec19a477afb596ab5dfcde0a57cd6f2b150087 bfd3d2d44efcc9ce164197db02750d965014f68a Aleksei Ekimov <ekimov_alex@outlook.com> 1412061672 +0400	commit: Стабильная сборка
+bfd3d2d44efcc9ce164197db02750d965014f68a dfa2f2ff7eba1ed6601c32d28231891cbbcc1252 Aleksei Ekimov <ekimov_alex@outlook.com> 1412233013 +0400	commit: Отправка по e-mail о регистрации пользователя
+dfa2f2ff7eba1ed6601c32d28231891cbbcc1252 2a22ef5af1151b39fcb53b19965c2b0d4f7a5591 Aleksei Ekimov <ekimov_alex@outlook.com> 1412758587 +0400	commit: Стабильная. Перед добавлением проекта создания дистрибутива
+2a22ef5af1151b39fcb53b19965c2b0d4f7a5591 08278dba97a9e917fad2eb9ca0993fc723e1e339 Aleksei Ekimov <ekimov_alex@outlook.com> 1412771748 +0400	commit: Добавлен проект LiveMultimediaSetup
+08278dba97a9e917fad2eb9ca0993fc723e1e339 1c01b788d0ad60405ab9da7095568e73aa977b07 Aleksei Ekimov <ekimov_alex@outlook.com> 1412938025 +0400	commit: Стабильная версия с Setup
+1c01b788d0ad60405ab9da7095568e73aa977b07 8d903b9655402abf3b4ce8a29cb9b08029ef0484 Aleksei Ekimov <ekimov_alex@outlook.com> 1413967595 +0400	commit: Стабильная версия. Перед изменением LMSrv.
+8d903b9655402abf3b4ce8a29cb9b08029ef0484 d0b3fd32f39fdd651595058a2f33811bdb41ef4d Aleksei Ekimov <ekimov_alex@outlook.com> 1432450715 +0300	commit: Работа с Cache
+d0b3fd32f39fdd651595058a2f33811bdb41ef4d 1b30ae7bfb2c4cc59519a322ba1f66c4c98b05fa Aleksei Ekimov <ekimov_alex@outlook.com> 1463379578 +0300	commit: Промежуточный вариант
+1b30ae7bfb2c4cc59519a322ba1f66c4c98b05fa ae150f2a3745af5a0145fa95a428e074de2042d1 ekimo <ekimo@DEVELOPER> 1665479126 +0300	commit: First push
+ae150f2a3745af5a0145fa95a428e074de2042d1 775f1b3570506891acbdb38d78b846e249752af6 ekimo <ekimo@DEVELOPER> 1665484326 +0300	commit: Check ID
+775f1b3570506891acbdb38d78b846e249752af6 e6fd79fc91e38bdc785f76962ec43329fadf0f62 ekimo <ekimo@DEVELOPER> 1665484343 +0300	commit: Check ID

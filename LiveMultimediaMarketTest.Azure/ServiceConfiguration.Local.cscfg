@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="LiveMultimediaMarketTest.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="LiveMultimediaSite">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="EndpointAddress" value="http://service.live-mm.com:8080/LiveMultimediaService.svc" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+  </Role>
+  <Role name="LiveMultimediaService">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="MultimediaFileBufferLength" value="4194304" />
+      <Setting name="DelayMaxSeconds" value="5" />
+      <Setting name="DelayErrorSeconds" value="10" />
+      <Setting name="IdleTimeSeconds" value="600" />
+      <Setting name="DelayRequestMilliseconds" value="500" />
+      <Setting name="WaitTimeReplySeconds" value="3600" />
+      <Setting name="MaxConnection" value="100001" />
+      <Setting name="MaxCountRequestInQueue" value="100000" />
+      <Setting name="SmtpFrom" value="support@live-mm.com" />
+      <Setting name="SmtpBcc" value="support@live-mm.com" />
+      <Setting name="SmtpHost" value="mail.nic.ru" />
+      <Setting name="SmtpPort" value="25" />
+      <Setting name="SmtpEnableSsl" value="false" />
+      <Setting name="SmtpDefaultCredentials" value="false" />
+      <Setting name="SmtpUserName" value="support@live-mm.com" />
+      <Setting name="SmtpPassword" value="Takeiteasy2" />
+      <Setting name="IsDebugWrite" value="false" />
+      <Setting name="IsRefreshTranslate" value="false" />
+      <Setting name="UrlMultimediaService" value="http://service.live-mm.com:8080/GetMultimedia.ashx" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="service.live-mm.com" thumbprint="87C466617DD383CEE0246A266717D8EA3D521DDA" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

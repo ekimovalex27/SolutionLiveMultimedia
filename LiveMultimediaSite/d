@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Дополнительные сведения по настройке приложения ASP.NET см. по ссылке
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+  <!-- Alex Ekimov Start -->
+  <!-- FOR MVC
+  <appSettings>
+    <add key="webPages:Version" value="2.0.0"/>
+  </appSettings>
+  -->
+    
+  <system.net>
+    <connectionManagement>
+      <clear />
+      <add address="http://service.live-mm.com" maxconnection="1000000" />
+      <add address="https://service.live-mm.com" maxconnection="1000000" />
+      <add address="http://127.0.0.1:8080/LiveMultimediaService.svc" maxconnection="1000000" />
+      <add address="http://service.live-mm.com/LiveMultimediaService.svc" maxconnection="1000000" />
+      <!--<add address="*" maxconnection="1" />-->
+      <add address="*" maxconnection="1000000" />
+    </connectionManagement>
+  </system.net>
+  <!-- Alex Ekimov Stop -->
+    
+  <!--<system.diagnostics>
+    <trace>
+      <listeners>
+        <add type="Microsoft.WindowsAzure.Diagnostics.DiagnosticMonitorTraceListener, Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" name="AzureDiagnostics">
+          <filter type="" />
+        </add>
+      </listeners>
+    </trace>
+  </system.diagnostics>-->
+  
+  <!--
+    Описание изменений web.config см. по адресу http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    Следующие атрибуты можно установить с помощью тега <httpRuntime>.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.5.1" />
+    <!-- Alexey Ekimov.  targetFramework="4.5" to targetFramework="4.5.1"-->
+    <httpRuntime requestValidationMode="4.5" targetFramework="4.5" maxRequestLength="2147483647" requestLengthDiskThreshold="65536" delayNotificationTimeout="120" executionTimeout="1000000000" />
+    <sessionState timeout="120" />
+    <pages controlRenderingCompatibilityVersion="4.0" />
+    
+    <!-- Aleksei Ekmov. Для отладки -->
+    <!--<customErrors mode="Off" />-->
+    
+    <!-- Aleksei Ekmov. I manage runtime errors from global.aspx -->
+    <!-- mode="Off|On|RemoteOnly" -->
+
+    <!-- Aleksei Ekmov. Manage server errors -->
+    <customErrors mode="On" defaultRedirect="500.html" />
+
+  </system.web>
+  <system.serviceModel>
+    <protocolMapping>
+      <add scheme="https" binding="basicHttpsBinding" />
+    </protocolMapping>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_LanguageService" />
+        <binding name="WCFhttp" />
+        <binding name="WCFhttps">
+          <security mode="Transport" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://api.microsofttranslator.com/V2/soap.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_LanguageService" contract="TranslatorService.LanguageService" name="BasicHttpBinding_LanguageService" />
+      <endpoint address="http://service.live-mm.com/LiveMultimediaService.svc" binding="basicHttpBinding" bindingConfiguration="WCFhttp" contract="LiveMultimediaService.ILiveMultimediaService" name="WCFhttp" />
+      <endpoint address="https://service.live-mm.com/LiveMultimediaService.svc" binding="basicHttpBinding" bindingConfiguration="WCFhttps" contract="LiveMultimediaService.ILiveMultimediaService" name="WCFhttps" />
+    </client>
+    <!-- My setup below -->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="">
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="true" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Edm" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.8.1.0" newVersion="5.8.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.OData" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.8.1.0" newVersion="5.8.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Spatial" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.0.0" newVersion="5.2.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Services.Client" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.8.1.0" newVersion="5.8.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Azure.KeyVault.Core" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.0.0.0" newVersion="2.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <!-- Aleksei Ekimov Start -->
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    
+    <rewrite>
+      <rules>
+         <!--Comment rule below for debugging on local computer 
+      <rule name="Redirect HTTP to HTTPS" stopProcessing="true">
+        <match url="(.*)"/>
+        <conditions>
+          <add input="{HTTPS}" pattern="^OFF$"/>
+        </conditions>
+        <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" redirectType="SeeOther"/>
+      </rule>
+      -->
+    </rules>
+    </rewrite>
+    
+<!--Переходит с live-mm.com на www.live-mm.com, но на https не работает -->
+    <!--<rewrite>
+      <rules>
+        <rule name="Redirect to www" stopProcessing="true">
+          <match url="(.*)" />
+          <conditions trackAllCaptures="false">
+            <add input="{HTTP_HOST}" pattern="^live-mm.com$" />
+          </conditions>
+          <action type="Redirect" url="{MapProtocol:{HTTPS}}://www.live-mm.com/{R:1}" />
+        </rule>
+      </rules>
+      <rewriteMaps>
+        <rewriteMap name="MapProtocol">
+          <add key="on" value="https" />
+          <add key="off" value="http" />
+        </rewriteMap>
+      </rewriteMaps>
+    </rewrite> -->
+
+  </system.webServer>
+  <!-- Aleksei Ekimov Stop -->
+</configuration>

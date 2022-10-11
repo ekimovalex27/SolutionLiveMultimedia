@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<ServiceConfiguration serviceName="LiveMultimediaSite.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">-->
+<ServiceConfiguration serviceName="LiveMultimediaSite.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="LiveMultimediaSite">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="EndpointAddress" value="http://service.live-mm.com/LiveMultimediaService.svc" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="Ekimov-AV" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBfC3JIn036XQl8UJuKRjnwwDQYJKoZIhvcNAQEBBQAEggEAHf/yrMsCDIXvRfXBwu+e3d67nQBHAWOKoYfmi+yb7WWXAlWdOj8WEJIGS/AzRIhISoVyJVgkhlNQ0kW03kmWeLJvqTgEMq23x+CwJ7SsDuujgMnNDEQNox79p4z9gJF/fIb3jY/T1y6bnBcSzgBqlhevDVkpeWyZ8ARLZ5zJDabWL5qE6m33Qd8h4S/mmgui8RXJtYTMaprQmUe7iAwGh+B2RBC4LMm35HBWXp187ud+N2deNQ1p/h2892cqmnhInKMBBTzBLzd3XyGRRgOgoOsHY3HbOXLNMnjqxabLl5eQSZIIW7EcniDeLQziLD5IW8rPukO+kLtjbgc1pPAoOTA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLWCWmOpHJ1xgBjl9LM/tu6D3LDKyV7bqHI1LbER61kwCE0=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-08-15T23:59:59.0000000+03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="ff9e78c0-8f32-417c-b74d-19f9b2bcff9a" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="StartSSL www.live-mm.com" thumbprint="A03AF649CD90DA7D04702C2E70C9A3DD56BB88BE" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="7F7417332D5958D6CF2542332B016A6F36A44478" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

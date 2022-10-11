@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{EF83B71D-64C5-41FF-9404-7A0103483942}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiveMultimediaServer</RootNamespace>
+    <AssemblyName>LiveMultimediaServer</AssemblyName>
+    <DefaultLanguage>en</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>
+    </PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>0FC0AD2D110BC7DE42E5B059DB417171F224F412</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Never</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="LiveMultimediaServer_StoreKey.pfx" />
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Language.xaml.cs">
+      <DependentUpon>Language.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageInfoTemplate.xaml.cs">
+      <DependentUpon>LanguageInfoTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LiveMultimediaMarket.cs" />
+    <Compile Include="LiveMultimediaServiceConnection.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="LiveMultimediaServer_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\LiveMultimediaMarket150.scale-100.png" />
+    <Content Include="Assets\LiveMultimediaMarket150.scale-125.png" />
+    <Content Include="Assets\LiveMultimediaMarket150.scale-150.png" />
+    <Content Include="Assets\LiveMultimediaMarket150.scale-200.png" />
+    <Content Include="Assets\LiveMultimediaMarket150.scale-400.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x150.scale-100.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x150.scale-125.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x150.scale-150.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x150.scale-200.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x150.scale-400.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x310.scale-100.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x310.scale-125.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x310.scale-150.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x310.scale-200.png" />
+    <Content Include="Assets\LiveMultimediaMarket310x310.scale-400.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.scale-100.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.scale-125.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.scale-150.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.scale-200.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.scale-400.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.targetsize-16.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.targetsize-24.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.targetsize-256.png" />
+    <Content Include="Assets\LiveMultimediaMarket44.targetsize-48.png" />
+    <Content Include="Assets\LiveMultimediaMarket71.scale-100.png" />
+    <Content Include="Assets\LiveMultimediaMarket71.scale-125.png" />
+    <Content Include="Assets\LiveMultimediaMarket71.scale-150.png" />
+    <Content Include="Assets\LiveMultimediaMarket71.scale-200.png" />
+    <Content Include="Assets\LiveMultimediaMarket71.scale-400.png" />
+    <Content Include="Assets\LiveMultimediaMarketStore50.scale-100.png" />
+    <Content Include="Assets\LiveMultimediaMarketStore50.scale-125.png" />
+    <Content Include="Assets\LiveMultimediaMarketStore50.scale-150.png" />
+    <Content Include="Assets\LiveMultimediaMarketStore50.scale-200.png" />
+    <Content Include="Assets\LiveMultimediaMarketStore50.scale-400.png" />
+    <Content Include="Assets\LMM_SplashScreen200.scale-100.png" />
+    <Content Include="Assets\LMM_SplashScreen200.scale-125.png" />
+    <Content Include="Assets\LMM_SplashScreen200.scale-150.png" />
+    <Content Include="Assets\LMM_SplashScreen200.scale-200.png" />
+    <Content Include="Assets\LMM_SplashScreen200.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="select_language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Language.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LanguageInfoTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiveMultimediaLibrary\LiveMultimediaLibrary.csproj">
+      <Project>{113d70d0-9404-485d-ada7-5bb7229da80b}</Project>
+      <Name>LiveMultimediaLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

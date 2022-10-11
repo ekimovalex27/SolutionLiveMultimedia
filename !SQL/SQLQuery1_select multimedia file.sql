@@ -1,0 +1,1 @@
+SELECT TOP 100 * FROM MultimediaFile WHERE IdUSer<>1 AND IdUSer<>2 AND IdUSer<>3 AND IdUSer<>5 AND IdUSer<>91 ORDER BY IdMultimediaFile DESC

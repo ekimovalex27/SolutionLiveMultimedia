@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="LiveMultimediaService" elementFormDefault="qualified" targetNamespace="LiveMultimediaService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/LiveMultimediaOAuth" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Specialized" />
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="LocalLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LocalLoginResult" nillable="true" type="q1:TupleOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalLogout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalLogoutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalLogoutResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetListMultimediaFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetListMultimediaFilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LocalGetListMultimediaFilesResult" nillable="true" type="q2:TupleOfArrayOfMultimediaFilestringtBw5ECsG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalListMultimediaFilesAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="ListMultimediaFiles" nillable="true" type="q3:ArrayOfMultimediaFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalListMultimediaFilesAddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LocalListMultimediaFilesAddResult" nillable="true" type="q4:TupleOfArrayOfstringstring9_SUPjmKX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalListMultimediaFilesRemove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="ListMultimediaFiles" nillable="true" type="q5:ArrayOfMultimediaFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalListMultimediaFilesRemoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalListMultimediaFilesRemoveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RemoteLoginResult" nillable="true" type="q6:TupleOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLogout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteLogoutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteLogoutResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteRegisterNewUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTariffPlan" type="xs:int" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteRegisterNewUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RemoteRegisterNewUserResult" nillable="true" type="q7:TupleOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteUpdateUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OldPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteUpdateUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteUpdateUserInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListMultimediaSource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListMultimediaSourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="GetListMultimediaSourceResult" nillable="true" type="q8:ArrayOfMultimediaSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LocalGetSettingsResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetMultimediaFileGUID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetMultimediaFileGUIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LocalGetMultimediaFileGUIDResult" nillable="true" type="q10:TupleOfArrayOfstringstring9_SUPjmKX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalSetMultimediaFileBuffer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileBuffer" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="IsStopTransfer" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IdJob" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalSetMultimediaFileBufferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalSetMultimediaFileBufferResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalSetMultimediaFileAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaFileLength" type="xs:long" />
+        <xs:element minOccurs="0" name="SpeedServer" type="xs:int" />
+        <xs:element minOccurs="0" name="IdJob" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalSetMultimediaFileAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalSetMultimediaFileAttributesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OAuthSetToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LiveMultimediaOAuth" minOccurs="0" name="OAuthUserToken" nillable="true" type="q11:OAuthToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OAuthSetTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OAuthSetTokenResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistSave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Playlist" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistSaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemotePlaylistSaveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="RemotePlaylistLoadResult" nillable="true" type="q12:ArrayOfPlaylistObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdPlaylist" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemotePlaylistDeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistItemSave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdPlaylist" type="xs:long" />
+        <xs:element minOccurs="0" name="IdTypeMultimediaSource" type="xs:int" />
+        <xs:element minOccurs="0" name="IdMultimediaItem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MultimediaItem" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistItemSaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemotePlaylistItemSaveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistItemRemove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdPlaylistItem" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemotePlaylistItemRemoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemotePlaylistItemRemoveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLanguages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLanguagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetLanguagesResult" nillable="true" type="q13:TupleOfArrayOfLanguageInfostring58IzrCRE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetLocalization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalGetLocalizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="LocalGetLocalizationResult" nillable="true" type="q14:TupleOfArrayOfLocalizationElementstringstringfpVz983_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteGetLocalization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteGetLocalizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RemoteGetLocalizationResult" nillable="true" type="q15:TupleOfArrayOfLocalizationElementstringstringfpVz983_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetItemsResult" nillable="true" type="q16:TupleOfArrayOfMultimediaItemstringtBw5ECsG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreadCrumbs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreadCrumbsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetBreadCrumbsResult" nillable="true" type="q17:TupleOfArrayOfBreadCrumpsstringtBw5ECsG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckAuthorizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/System.Collections.Specialized" minOccurs="0" name="CheckAuthorizationResult" nillable="true" type="q18:StringDictionary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteCreateMultimediaJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UniqueMultimediaRequest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteCreateMultimediaJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RemoteCreateMultimediaJobResult" nillable="true" type="q19:TupleOfStringDictionarystringuD3OFVg8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteCancelMultimediaJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdJob" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteCancelMultimediaJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoteCancelMultimediaJobResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultimedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdJob" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Range1" type="xs:long" />
+        <xs:element minOccurs="0" name="Range2" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultimediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/Message" name="GetMultimediaResult" type="q20:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeMultimedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeMultimediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetTypeMultimediaResult" nillable="true" type="q21:TupleOfLocalizationElementstring58IzrCRE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tracing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LiveMultimediaData" minOccurs="0" name="TypeLog" type="q22:enumTypeLog" />
+        <xs:element minOccurs="0" name="Scope" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Procedure" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientIp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientPort" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TracingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Scope" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Procedure" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientIp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientPort" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceInformationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceWarning">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Scope" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Procedure" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientIp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientPort" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceWarningResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Scope" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Procedure" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientIp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ClientPort" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="UserToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceErrorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

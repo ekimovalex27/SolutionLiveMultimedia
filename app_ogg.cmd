@@ -1,0 +1,1 @@
+appcmd set config /section:staticContent /+[fileExtension='.ogg',mimeType='audio/ogg']

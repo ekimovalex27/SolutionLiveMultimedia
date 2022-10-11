@@ -1,0 +1,27 @@
+AlchemyLanguage service
+
+
+
+
+
+
+
+GET /google/article_windows.php?url=http://news.google.com/news/url?sa=t&fd=R&ct2=ru_ru&usg=AFQjCNEuvcZYQCbTuEf2CxZg9FcuCVmkCw&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779940682771&ei=GtZzWPCcBvKAyQPB_p_YBA&url=http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b?from%3Dnewsfeed
+GET /google/article_windows.php?url=http://news.google.com/news/url?sa=t&fd=R&ct2=ru_ru&usg=AFQjCNEuvcZYQCbTuEf2CxZg9FcuCVmkCw&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779940682771&ei=GtZzWPCcBvKAyQPB_p_YBA&url=http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b?from%3Dnewsfeed
+http://lmnapps-d-p.azurewebsites.net/google/article_windows.php?url=http://news.google.com/news/url?sa=t&fd=R&ct2=ru_ru&usg=AFQjCNEuvcZYQCbTuEf2CxZg9FcuCVmkCw&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52779940682771&ei=GtZzWPCcBvKAyQPB_p_YBA&url=http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b?from%3Dnewsfeed
+
+http://access.alchemyapi.com/calls/url/URLGetText?apikey=1b3711f22d37af04c8c436c168f118365d3716d2&url=http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b?from=newsfeed&outputMode=json&useMetadata=0&sourceText=cleaned
+http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b?from=newsfeed
+http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b
+
+
+http://lmnapps-d-p.azurewebsites.net/google/article_windows.php?url=http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b
+
+
+GET
+https://mercury.postlight.com/parser?url=http://www.rbc.ru/society/09/01/2017/587393b89a79476ec61ba41b
+Content-Type: application/json
+x-api-key: HGrDt1m357XlO92O5go0kAXsuopmE2NzWMUPpoDN
+
+
+http://access.alchemyapi.com/calls/url/URLGetText?apikey=1b3711f22d37af04c8c436c168f118365d3716d2&url=http://www.autanet.cz/autonews-nova-generace-hyundai-i30-je-tady-na-trh-vstupuje-v-limitovane-vybave-3214&outputMode=json&useMetadata=0&sourceText=cleaned

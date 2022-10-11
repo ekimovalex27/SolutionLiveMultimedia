@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="LiveMultimediaSite.AzureUSA" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="LiveMultimediaSite">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=livemultimediausa;AccountKey=yu/rGH0ifkwApVEFUgg7ASTxYP3REtNkHNKWeC90TWPPVyBGN/UoqnWm/kE9UL+C2kdjCXkBc4YyfkkFVch/mw==" />
+      <Setting name="EndpointAddress" value="http://livemultimediaserviceusa.cloudapp.net/LiveMultimediaService.svc" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="StartSSL www.live-mm.com" thumbprint="477C32FECFC341FFEFD2F1DD821945861EF9DDDE" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

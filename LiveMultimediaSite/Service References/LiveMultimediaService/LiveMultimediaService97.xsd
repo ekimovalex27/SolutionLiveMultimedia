@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMultimediaData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMultimediaData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://service.live-mm.com/LiveMultimediaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfMultimediaFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MultimediaFile" nillable="true" type="tns:MultimediaFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMultimediaFile" nillable="true" type="tns:ArrayOfMultimediaFile" />
+  <xs:complexType name="MultimediaFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Album" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Keywords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MultimediaFileGUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeMultimedia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isSelectMultimediaFile" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MultimediaFile" nillable="true" type="tns:MultimediaFile" />
+  <xs:complexType name="ArrayOfMultimediaSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MultimediaSource" nillable="true" type="tns:MultimediaSource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMultimediaSource" nillable="true" type="tns:ArrayOfMultimediaSource" />
+  <xs:complexType name="MultimediaSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdParentTypeMultimediaSource" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPublisher" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTypeMultimediaSource" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageUrlLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageUrlMedium" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageUrlSmall" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsHasChild" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTranslateTitle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NameMultimediaSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderSort" type="xs:int" />
+      <xs:element minOccurs="0" name="Style" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleBackColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleBorderColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleFontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleForeColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleHeight" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleWidth" type="xs:int" />
+      <xs:element minOccurs="0" name="TitleMultimediaSource" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MultimediaSource" nillable="true" type="tns:MultimediaSource" />
+  <xs:complexType name="ArrayOfPlaylistObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlaylistObject" nillable="true" type="tns:PlaylistObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlaylistObject" nillable="true" type="tns:ArrayOfPlaylistObject" />
+  <xs:complexType name="PlaylistObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdPlaylist" type="xs:long" />
+      <xs:element minOccurs="0" name="Playlist" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlaylistObject" nillable="true" type="tns:PlaylistObject" />
+  <xs:complexType name="ArrayOfMultimediaItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MultimediaItem" nillable="true" type="tns:MultimediaItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMultimediaItem" nillable="true" type="tns:ArrayOfMultimediaItem" />
+  <xs:complexType name="MultimediaItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSource" type="xs:int" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleBackColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleFontFamily" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleFontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleForeColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleHeight" type="xs:int" />
+      <xs:element minOccurs="0" name="StyleWidth" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeItem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlImage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MultimediaItem" nillable="true" type="tns:MultimediaItem" />
+  <xs:complexType name="ArrayOfBreadCrumps">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BreadCrumps" nillable="true" type="tns:BreadCrumps" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBreadCrumps" nillable="true" type="tns:ArrayOfBreadCrumps" />
+  <xs:complexType name="BreadCrumps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequiredAuthorization" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BreadCrumps" nillable="true" type="tns:BreadCrumps" />
+  <xs:simpleType name="enumTypeLog">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Information">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Warning">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="enumTypeLog" nillable="true" type="tns:enumTypeLog" />
+</xs:schema>

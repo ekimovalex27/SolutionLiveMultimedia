@@ -1,0 +1,1 @@
+MainPackage=C:\projects\SolutionLiveMultimedia\LiveMultimediaServer\bin\x86\Debug\LiveMultimediaServer_1.1.1.0_x86_Debug.appx

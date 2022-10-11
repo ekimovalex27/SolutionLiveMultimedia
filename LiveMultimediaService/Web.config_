@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+
+    <!-- Aleksei Ekimov Start -->
+    <!-- Set MaxConnection to Windows Azure -->
+    <system.net>
+        <connectionManagement>
+            <clear />
+            <!--<add address="*" maxconnection="1"/>-->
+            <add address="http://service.storageint.com" maxconnection="1000000" />
+            <add address="http://api.microsofttranslator.com" maxconnection="1000000" />
+            <add address="https://livemultimediamarket.blob.core.windows.net" maxconnection="1000000" />
+            <add address="tjy1yewoiq.database.windows.net" maxconnection="1000000" />
+            <add address="*" maxconnection="1000000" />
+        </connectionManagement>
+    </system.net>
+    <!-- Aleksei Ekimov Stop -->
+    
+    <!--  Для сбора трассировок диагностики раскомментируйте расположенный ниже раздел или объедините с существующим разделом system.diagnostics.
+        Чтобы сохранить трассировки в хранилище, обновите параметр DiagnosticsConnectionString, используя свои учетные данные хранилища.
+        Во избежание снижения производительности не забудьте отключить трассировку в производственных развертываниях.
+  <system.diagnostics>     
+    <sharedListeners>
+      <add name="AzureLocalStorage" type="LiveMultimediaService.AzureLocalStorageTraceListener, LiveMultimediaService"/>
+    </sharedListeners>
+    <sources>
+      <source name="System.ServiceModel" switchValue="Verbose, ActivityTracing">
+        <listeners>
+          <add name="AzureLocalStorage"/>
+        </listeners>
+      </source>
+      <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
+        <listeners>
+          <add name="AzureLocalStorage"/>
+        </listeners>
+      </source>
+    </sources> 
+   </system.diagnostics> -->
+    
+  <system.diagnostics>
+    <trace>
+      <listeners>
+        <add type="Microsoft.WindowsAzure.Diagnostics.DiagnosticMonitorTraceListener, Microsoft.WindowsAzure.Diagnostics, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" name="AzureDiagnostics">
+          <filter type="" />
+        </add>
+      </listeners>
+    </trace>
+  </system.diagnostics>
+  <!--
+    Описание изменений web.config см. по адресу http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    Следующие атрибуты можно установить с помощью тега <httpRuntime>.
+      <system.Web>
+        <httpRuntime targetFramework="4.5" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.5.1" />
+  </system.web>
+  <system.serviceModel>
+    <!-- Alex Ekimov Start -->
+    <client>
+      <endpoint address="http://api.microsofttranslator.com/V2/soap.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_LanguageService" contract="TranslatorService.LanguageService" name="BasicHttpBinding_LanguageService" />
+      <endpoint address="http://service.storageint.com/StorageInterfaces.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IStorageInterfaces" contract="StorageInterfacesService.IStorageInterfaces" name="BasicHttpBinding_IStorageInterfaces" />
+    </client>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="basicHttpBindingConfig" closeTimeout="01:01:00" openTimeout="01:01:00" receiveTimeout="01:10:00" sendTimeout="01:01:00" maxBufferPoolSize="2147483647" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security>
+            <transport clientCredentialType="None" />
+          </security>
+        </binding>
+        <binding name="BasicHttpBinding_LanguageService" />
+        <binding name="BasicHttpBinding_IStorageInterfaces" />
+      </basicHttpBinding>
+    </bindings>
+    <services>
+      <service name="JetSAS.LiveMultimediaService" behaviorConfiguration="Throttled">
+        <endpoint address="" behaviorConfiguration="" binding="basicHttpBinding" bindingConfiguration="basicHttpBindingConfig" contract="JetSAS.ILiveMultimediaService" />
+        <host>
+          <timeouts closeTimeout="01:00:10" openTimeout="01:01:00" />
+        </host>
+      </service>
+    </services>
+    <!-- Alex Ekimov Stop -->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="Throttled">
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true" httpsGetBinding="" />
+          <!-- Чтобы получать сведения об исключении при сбоях для отладки, следует установить значение True для указанного ниже параметра.
+          Следует установить значение False для этого параметра перед развертыванием, чтобы не допустить раскрытия сведений об исключении -->          
+            <!--<serviceDebug includeExceptionDetailInFaults="False" />-->
+            <serviceDebug includeExceptionDetailInFaults="True" />
+          <!-- Alex Ekimov Start -->
+          <serviceThrottling maxConcurrentCalls="5000" />
+          <!-- maxConcurrentInstances="500" maxConcurrentSessions="500" -->
+          <!-- Alex Ekimov Stop -->
+        </behavior>
+      </serviceBehaviors>
+      <endpointBehaviors>
+        <behavior name="NewBehavior0">
+          <enableWebScript />
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true" aspNetCompatibilityEnabled="true" />
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+    <!--
+        Для просмотра корневого каталога веб-приложения при отладке задайте ниже значение true.
+        Перед развертыванием задайте значение false во избежание раскрытия сведений о папке веб-приложения.
+    -->    
+      <!--<directoryBrowse enabled="false" />-->
+      <directoryBrowse enabled="true" />
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.OData" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.6.4.0" newVersion="5.6.4.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Edm" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.6.4.0" newVersion="5.6.4.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Services.Client" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.6.4.0" newVersion="5.6.4.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Common.Logging" publicKeyToken="af08829b84f0328e" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.1.2.0" newVersion="2.1.2.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

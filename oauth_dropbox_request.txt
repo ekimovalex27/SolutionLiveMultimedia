@@ -1,0 +1,19 @@
+Get access to multimedia for multimedia-portal "Live Multimedia Market"
+
+https://www.live-mm.com
+
+1. Go to https://www.live-mm.com
+2. Select "In Cloud"
+3. Select "Dropbox"
+4. Select "Music"
+5. Log in with username: ***, password: ***
+6. Try to listen to mp3 from list
+
+
+1. Go to https://www.live-mm.com
+2. Click "Demo" in top right corner
+2. Select "In Cloud"
+3. Select "Dropbox"
+4. Select "Music" or "Movies"
+5. Log in with needed username of Dropbox
+6. Try to listen to or watch multimedia from Dropbox

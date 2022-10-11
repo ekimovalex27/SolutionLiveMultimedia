@@ -1,0 +1,76 @@
+return API.audio.getAlbums();
+return API.audio.get();
+return API.audio.get({"count": 1});
+
+return [API.audio.getAlbums(),API.audio.get()];
+
+return [API.audio.getAlbums()];
+return [API.audio.getAlbums().items];
+return [API.audio.getAlbums().items@.id];
+return [API.audio.getAlbums().items@.title];
+
+return [API.audio.get()];
+return [API.audio.get().items];
+return [API.audio.get().items@.album_id];
+
+-------------------------------------------
+var IsFoundNoAlbum="false";
+var countitem = API.audio.get().count;
+if (countitem>0)
+{
+  var ListAlbumId=[API.audio.get().items];
+  var intAlbumId;
+  var i=0;  
+  while (IsFoundNoAlbum=="false" && i<countitem)
+  {
+    intAlbumId=parseInt(ListAlbumId[0][i].album_id);
+    if (intAlbumId>0) {IsFoundNoAlbum="true";}
+    i=i+1;
+  }
+}
+return {"IsFoundNoAlbum":IsFoundNoAlbum, "albums":API.audio.getAlbums().items};
+-------------------------------------------
+return {"stub":false,"items":API.audio.get({"album_id":0}).items};
+return API.audio.get({"album_id":0});
+return API.video.get({"videos":"202230988 _171856337"}).items@.files;
+return API.video.get({"videos":"202230988_166868733"});
+return {"urls": API.video.get({"videos":"202230988_171856337"}).items@.files};
+return API.audio.getById({"audios":"202230988_439420291"})@.url;
+return {"url":API.audio.getById({"audios":"202230988_439420291"})@.url};
+return {"urls": API.video.get({"videos":"202230988 _171856337"}).items@.files};
+-------------------------------------------
+
+return API.audio.get({"album_id":54259553}).items;
+return {"IsFoundNoAlbum":false,"items":API.audio.get({"album_id":54259553}).items};
+
+return API.video.get().items;
+return API.video.getAlbums().items;
+
+
+
+var ListIdVideo=API.video.get().items@.id;
+
+return {"IsFoundNoAlbum":"false", "items":API.video.get().items};
+-----------------------------------------------------
+var countitem = API.audio.get().count;
+var a[1];
+return 1;
+
+if (countitem>0)
+{
+  var ListAlbumId=[API.audio.get().items];
+  var intAlbumId;
+  var i=0;  
+  while (i<countitem)
+  {
+    intAlbumId=parseInt(ListAlbumId[0][i].album_id);
+    if (intAlbumId<=0)    
+    {
+
+    }
+    i=i+1;
+  }
+}
+return {"folder":API.audio.getAlbums().items,"IsFoundNoAlbum":IsFoundNoAlbum};
+-----------------------------------------------------
+return {"folders":API.audio.getAlbums().items,"items":API.audio.get().items};
